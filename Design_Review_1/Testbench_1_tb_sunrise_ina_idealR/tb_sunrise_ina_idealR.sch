@@ -1,0 +1,1185 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+B 2 -320 -200 480 200 {flags=graph
+y1=1.3184376
+y2=1.3188601
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 7 10 12 21 18 8"
+node="vinn
+vinp
+vinp_wos
+vin_diff
+vin_diff_wos
+vfb_ni
+vfb_i"}
+B 2 1320 -200 2120 200 {flags=graph
+y1=0
+y2=27
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+node="AV; vout db20()
+\\" 23.34 \\""
+color="10 4"
+dataset=-1
+unitx=1
+logx=1
+logy=0
+sim_type=ac
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_ac.raw
+x2=7}
+B 2 1320 220 2120 620 {flags=graph
+y1=-180
+y2=180
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=9
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+node="\\" -45\\"
+\\" -90\\"
+\\" -180\\"
+
+SCH; ph(vout)"
+color="11 12 16 10"
+dataset=-1
+unitx=1
+logx=1
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_ac.raw
+sim_type=ac
+autoload=1}
+B 2 2140 -200 2940 200 {flags=graph
+y1=0
+y2=0.65
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=6.4743556e-07
+x2=2.2858355e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=vin_diff
+color=4
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=dc
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_dc.raw}
+B 2 2140 220 2940 620 {flags=graph
+y1=0.05
+y2=3.1
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=6.4743556e-07
+x2=2.2858355e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="vout_re;vout
+vout_id_re;vin_diff 5 *
+vinp
+vinn
+vip_stg2
+vin_stg2"
+color="7 11 8 10 12 21"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=dc
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_dc.raw}
+B 2 -320 220 480 620 {flags=graph
+y1=1.2983673
+y2=1.2992236
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10 21 17 8 8"
+node="vih
+vil 
+vin_stg2_diff
+vip_stg2
+vin_stg2
+vout"}
+B 2 500 640 1300 1040 {flags=graph
+y1=1.3e-07
+y2=1.5
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10"
+node="xirdac.xirdac_ctrl.rdac_ctrl_int[1]
+xirdac.xirdac_ctrl.rdac_ctrlb_int[1]"}
+B 2 500 1060 1300 1460 {flags=graph
+y1=8.7e-08
+y2=1.5
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10 21"
+node="xirdac.rdac_ctrl_onehot[2]
+xirdac.rdac_ctrl_onehot[1]
+xirdac.rdac_ctrl_onehot[0]"}
+B 2 500 -200 1300 200 {flags=graph
+y1=-3.8e-26
+y2=1.6
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10"
+node="rdac_ctrl_1
+rdac_ctrl_0"
+hilight_wave=1}
+B 2 500 220 1300 620 {flags=graph
+y1=0
+y2=0.01
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10"
+node="xirdac.xirdac_ctrl.rdac_ctrl_int[0]
+xirdac.xirdac_ctrl.rdac_ctrlb_int[0]"}
+B 2 500 1480 1300 1880 {flags=graph
+y1=1.9e-07
+y2=3.3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10 21"
+node="xirdac.rdac_ctrl_onehot_hv[2]
+xirdac.rdac_ctrl_onehot_hv[1]
+xirdac.rdac_ctrl_onehot_hv[0]"}
+B 2 2140 640 2940 1040 {flags=graph
+y1=0.1
+y2=3.2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=6.4743556e-07
+x2=2.2858355e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=dc
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_dc.raw
+color="4 10"
+node="vil
+vih"}
+B 2 500 1900 1300 2300 {flags=graph
+y1=1.9e-07
+y2=3.3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ina_tran.raw
+sim_type=tran
+autoload=1
+color="4 10 21"
+node="xirdac.rdac_ctrlb_onehot_hv[2]
+xirdac.rdac_ctrlb_onehot_hv[1]
+xirdac.rdac_ctrlb_onehot_hv[0]"}
+B 2 2140 1060 2940 1460 {flags=graph
+y1=1.3
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=6.4743556e-07
+x2=2.2858355e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+sim_type=dc
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_dc.raw
+color="10 11 8 21"
+node="vfb_ni2
+vfb_i2
+vfb_i
+vfb_ni"}
+B 2 2960 -200 3760 200 {flags=graph
+y1=4.8e-10
+y2=2.6e-07
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1
+x2=8
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=1
+logy=0
+sim_type=noise
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_noise_density.raw
+color=4
+node=onoise_spectrum
+hilight_wave=0}
+B 2 2960 220 3760 620 {flags=graph
+y1=0
+y2=0.00013
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1
+x2=8
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=1
+logy=0
+sim_type=noise
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_noise_density.raw
+color=4
+node="\\"integrated_noise; onoise_spectrum onoise_spectrum * integ() sqrt()\\""}
+B 2 3780 -200 4580 200 {flags=graph
+y1=-170
+y2=-46
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1
+x2=1e+09
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=1
+logy=0
+sim_type=ac
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_ac.raw
+color="4 10 12"
+node="vin_lo; xxvinn db20()
+vin_hi; xxvinp_wos db20()
+vout; vout db20()"}
+B 2 3780 220 4580 620 {flags=graph
+y1=4
+y2=110000
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1
+x2=1e+09
+divx=5
+subdivx=8
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=1
+logy=0
+sim_type=ac
+autoload=1
+rawfile=$netlist_dir/tb_sunrise_ina_ac.raw
+color="4 10 21 8 7"
+node="vih; vih
+vil; vil
+vi2; vin_stg2_diff
+vinn
+vfb_i"}
+T {TRANSIENT RESPONSE} 350 -290 0 0 0.4 0.4 {}
+T {AC RESPONSE} 1620 -290 0 0 0.4 0.4 {}
+T {DC RESPONSE} 2400 -290 0 0 0.4 0.4 {}
+T {AC NOISE} 3050 -290 0 0 0.4 0.4 {}
+T {CMR} 3870 -290 0 0 0.4 0.4 {}
+N -1090 -60 -1090 -40 {
+lab=GND}
+N -1090 -160 -1090 -120 {
+lab=vssa}
+N -990 -60 -990 -20 {
+lab=vssa}
+N -990 -160 -990 -120 {
+lab=vdda}
+N -900 700 -900 720 {
+lab=ibias3}
+N -900 720 -840 720 {
+lab=ibias3}
+N -900 620 -900 640 {
+lab=vdda}
+N -900 620 -780 620 {lab=vdda}
+N -780 620 -780 680 {lab=vdda}
+N -980 560 -960 560 {lab=vip_stg2}
+N -960 560 -960 740 {lab=vip_stg2}
+N -960 740 -840 740 {lab=vip_stg2}
+N -980 1180 -960 1180 {lab=vin_stg2}
+N -960 560 -860 560 {lab=vip_stg2}
+N -800 560 -560 560 {lab=vss_pcb}
+N -780 800 -780 840 {
+lab=vssa}
+N -960 1180 -860 1180 {lab=vin_stg2}
+N -560 840 -560 880 {
+lab=vssa}
+N -560 740 -560 780 {
+lab=vout}
+N -1680 560 -1520 560 {lab=vinp_wos}
+N -1680 1180 -1520 1180 {lab=vinn}
+N -1460 620 -1460 660 {
+lab=vssa}
+N -1460 1240 -1460 1320 {
+lab=vssa}
+N -1580 1140 -1580 1160 {
+lab=ibias2}
+N -1580 1160 -1520 1160 {
+lab=ibias2}
+N -1580 1060 -1580 1080 {
+lab=vdda}
+N -1580 440 -1580 460 {
+lab=vdda}
+N -1580 440 -1460 440 {lab=vdda}
+N -1460 440 -1460 500 {lab=vdda}
+N -1580 1060 -1460 1060 {lab=vdda}
+N -1460 1060 -1460 1120 {lab=vdda}
+N -1680 1280 -1680 1320 {
+lab=vssa}
+N -1680 1180 -1680 1220 {
+lab=vinn}
+N -1680 1320 -1460 1320 {
+lab=vssa}
+N -1400 560 -1220 560 {lab=vih}
+N -1220 560 -1220 620 {lab=vih}
+N -1400 1180 -1220 1180 {lab=vil}
+N -1220 1120 -1220 1180 {lab=vil}
+N -1580 580 -1520 580 {lab=vfb_ni}
+N -1580 580 -1580 700 {lab=vfb_ni}
+N -1580 1200 -1520 1200 {lab=vfb_i}
+N -1580 1200 -1580 1260 {lab=vfb_i}
+N -1280 1040 -1280 1260 {lab=vfb_i}
+N -560 1350 -560 1390 {
+lab=vssa}
+N -640 1300 -600 1300 {
+lab=vinp}
+N -640 1340 -600 1340 {
+lab=vinn}
+N -560 1260 -560 1290 {lab=vin_diff}
+N -560 1260 -500 1260 {lab=vin_diff}
+N -1220 1040 -1220 1060 {lab=vfb_i}
+N -1220 560 -1040 560 {lab=vih}
+N -1220 1180 -1040 1180 {lab=vil}
+N -1280 1040 -1220 1040 {lab=vfb_i}
+N -1580 520 -1580 540 {
+lab=ibias1}
+N -1580 540 -1520 540 {
+lab=ibias1}
+N -1220 700 -1220 800 {lab=vfb_ni}
+N -200 1350 -200 1390 {
+lab=vssa}
+N -280 1300 -240 1300 {
+lab=vih}
+N -280 1340 -240 1340 {
+lab=vil}
+N -200 1260 -200 1290 {lab=vin_stg2_diff}
+N -200 1260 -140 1260 {lab=vin_stg2_diff}
+N -770 -60 -770 -20 {
+lab=vssa}
+N -770 -160 -770 -120 {
+lab=vss_pcb}
+N -1680 560 -1680 600 {lab=vinp_wos}
+N -1680 660 -1680 700 {lab=vinp}
+N -380 1350 -380 1390 {
+lab=vssa}
+N -460 1300 -420 1300 {
+lab=vinp_wos}
+N -460 1340 -420 1340 {
+lab=vinn}
+N -380 1260 -380 1290 {lab=vin_diff_wos}
+N -380 1260 -320 1260 {lab=vin_diff_wos}
+N -960 760 -960 1180 {lab=vin_stg2}
+N -960 760 -840 760 {lab=vin_stg2}
+N -660 740 -560 740 {lab=vout}
+N -660 740 -660 1180 {lab=vout}
+N -720 740 -660 740 {lab=vout}
+N -1680 760 -1680 1180 {lab=vinn}
+N -1280 960 -1280 1000 {
+lab=vssa}
+N -1260 760 -1260 800 {
+lab=vdda_lv}
+N -1300 760 -1300 800 {
+lab=vdda}
+N -890 -60 -890 -20 {
+lab=vssa}
+N -890 -160 -890 -120 {
+lab=vdda_lv}
+N -1680 120 -1660 120 {lab=vssa}
+N -1680 100 -1660 100 {lab=vdda_lv}
+N -1360 100 -1320 100 {lab=bin_out_9}
+N -1360 120 -1320 120 {lab=bin_out_8}
+N -1360 140 -1320 140 {lab=bin_out_7}
+N -1360 160 -1320 160 {lab=bin_out_6}
+N -1360 180 -1320 180 {lab=bin_out_5}
+N -1360 200 -1320 200 {lab=bin_out_4}
+N -1360 220 -1320 220 {lab=bin_out_3}
+N -1360 240 -1320 240 {lab=bin_out_2}
+N -1360 260 -1320 260 {lab=rdac_ctrl_1}
+N -1360 280 -1320 280 {lab=rdac_ctrl_0}
+N -1520 880 -1340 880 {lab=rdac_ctrl_1,rdac_ctrl_0}
+N -1220 960 -1220 1040 {lab=vfb_i}
+N -1220 680 -1220 700 {lab=vfb_ni}
+N -1580 1260 -1280 1260 {lab=vfb_i}
+N -800 1180 -660 1180 {lab=vout}
+N -1580 700 -1220 700 {lab=vfb_ni}
+C {devices/vsource.sym} -1090 -90 0 0 {name=Vvssa value=0
+format="@name @pinlist @value"}
+C {devices/gnd.sym} -1090 -40 0 0 {name=l1 lab=GND}
+C {devices/lab_wire.sym} -1090 -140 3 1 {name=p6 sig_type=std_logic lab=vssa
+
+}
+C {devices/code.sym} -670 -130 0 0 {name=STIM_FILE only_toplevel=false value="** opencircuitdesign pdks install
+.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+.include /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
+
+
+** PARAMETERS **
+
+* global parameters
+.param xvdda = 3.3
+.param xvdda_lv = 1.5
+.param xtsim = 5u
+.csparam xtsim_var = 'xtsim'
+.param xibias = 10u
+.param xCload = 0p
+.param xtstep = 1n
+.csparam xtstep_var = 'xtstep'
+.param xdc_step = 10m
+.csparam xdc_step_var = 'xdc_step'
+.param xvos = 10m
+.param xnoise_stg1 = 1
+.param xnoise_stg1_ia = 1
+.param xnoise_stg1_nia = 1
+.param xnoise_stg1_rg = 1
+.param xnoise_stg2 = 1
+
+* input swing parameters
+* Below assumes you want a full input swing
+* this is the margin between the supplies which vout can swing to
+.param xvmargin = 50m
+* max vout
+.param xvin_diff_for_vout_max =  (xvdda/xAv_ina)-(xvmargin/xAv_ina)
+.csparam xvin_diff_for_vout_max_var = 'xvin_diff_for_vout_max'
+* min vout
+.param xvin_diff_for_vout_min =  (xvmargin/xAv_ina)
+.csparam xvin_diff_for_vout_min_var = 'xvin_diff_for_vout_min' 
+
+* set xvin_diff according to desired vout (max or min)
+.param xvin_diff = xvin_diff_for_vout_max
+
+* note on vin_cm: vin_cm_min = max(1V,xAv_id*vd_max). 
+* The 1V is due to the NMOS dp and means you cant sense < 1V. 
+* If you set vcm = xAv_id*vd_max (assuming this is > 1V), 
+* you will get a full signal swing at the input (=xvdda/xAv_ina).
+* If vcm gets larger, the NIA starts to saturate so dvin needs to be 
+* be < xvdda/xAv_ina. vin_cm_max simply equals xvdda. 
+*.param xvin_cm = xAv_ia*(xvdda/xAv_ina)
+
+* Below assumes you want to pick specific values
+.param xvin_cm = 1.32
+.param xvin_diff = 10m
+
+* set to the below to measure offset
+*.param xvin_diff = 0
+
+* ota model parameters
+.param xAv0_dB = 800
+.param xAv0 = 10^(xAv0_dB/20)
+.param xgmdp = 1m
+.param xGBW = 3Meg
+
+* stg1 parameters
+* Av = 1 => xRg = 50G, Av = 5 => xRg = 50k, Av = 11 => xRg = 20k, Av = 21 => xRg = 10k
+.param xRg= 50k
+.param dec_code_var = 1
+.csparam xdec_code_var = 'dec_code_var'
+* below is to ensure gain error due to xRsw < 1%
+*.param xRsw = xRg/100
+* below is to manually enter a value for xRsw
+.param xRsw = 100
+.param xRfb_stg1 = 100k
+.param xAv_stg1 = 1+((2*xRfb_stg1)/xRg)
+.csparam xAv_stg1_var = 'xAv_stg1'
+.param xbeta_stg1 = 1/xAv_stg1
+.param lg_stg1 = xAv0*xbeta_stg1
+.csparam lg_stg1_var = 'lg_stg1'
+.param xAv_ia = xRfb_stg1/xRg
+
+* stg2 parameters
+.param xvref = 0
+.param xRin_stg2 = 10k
+.param xRfb_stg2 = 10k
+.param xAv_stg2 = xRfb_stg2/xRin_stg2
+.csparam xAv_stg2_var = 'xAv_stg2'
+.param xbeta_stg2 = xRin_stg2/(xRin_stg2+xRfb_stg2)
+.param lg_stg2 = xAv0*xbeta_stg2
+.csparam lg_stg2_var = 'lg_stg2'
+
+* total ina gain parameter
+.param xAv_ina = xAv_stg1*xAv_stg2
+.csparam xAv_ina_var = 'xAv_ina'
+
+
+.temp 27
+
+* vlogA instantiations
+.model OTA_vcvs OTA_vcvs
+.model ideal_sw ideal_sw
+.model dec2bin_10b dec2bin_10b
+  
+.include tb_sunrise_ina.save
+
+* below line needs to be included if running ac noise analysys
+.save all
+
+*.option savecurrents
+
+*.save onoise* inoise* frequency
+.save i(v.xstb.Vi) v(xstb.x) v(av)
+.save v(vinp) v(vinn) v(vinp_wos) v(vin_diff) v(vin_diff_wos) v(vfb_ni) v(vfb_i) v(vih) v(vil) v(vip_stg2) v(vin_stg2) v(vin_stg2_diff) v(vout)
+.save v(vdda) v(vdda_lv) v(vssa) v(vss_pcb) v(ibias1) v(ibias2) v(ibias3) v(vfb_ni2) v(vfb_i2) v(rdac_ctrl_1) v(rdac_ctrl_0)
+.save v(xirdac.xirdac_ctrl.rdac_ctrl_int[0]) v(xirdac.xirdac_ctrl.rdac_ctrlb_int[0]) v(xirdac.xirdac_ctrl.rdac_ctrl_int[1]) v(xirdac.xirdac_ctrl.rdac_ctrlb_int[1]) v(xirdac.rdac_ctrl_onehot[2]) v(xirdac.rdac_ctrl_onehot[1]) v(xirdac.rdac_ctrl_onehot[0]) v(xirdac.rdac_ctrl_onehot_hv[2]) v(xirdac.rdac_ctrl_onehot_hv[1]) v(xirdac.rdac_ctrl_onehot_hv[0]) v(xirdac.rdac_ctrlb_onehot_hv[2]) v(xirdac.rdac_ctrlb_onehot_hv[1]) v(xirdac.rdac_ctrlb_onehot_hv[0])
+
+
+  
+.control
+
+pre_osdi OTA_vcvs.osdi
+pre_osdi ideal_sw.osdi
+pre_osdi dec2bin_10b.osdi
+  
+** 1. DCOP ANALYSIS ** 
+  
+  op 
+  remzerovec
+  set filetype=binary
+  ** first write deletes existing file
+  write tb_sunrise_ina_dcop.raw
+ 
+** 2. TRAN ANALYSIS ** 
+
+  remzerovec
+  *set appendwrite
+  tran $&xtstep_var $&xtsim_var
+  write tb_sunrise_ina_tran.raw
+ *unset appendwrite 
+ 
+** 3. TRAN MEASURES ** 
+
+ echo --
+ meas tran vid_stg1_ave AVG v(vin_diff) from=1n to=$&xtsim_var
+ meas tran vid_stg2_ave AVG v(vin_stg2_diff) from=1n to=$&xtsim_var
+ meas tran vo_ave AVG v(vout) from=1n to=$&xtsim_var
+ meas tran vih_ave AVG v(vih) from=1n to=$&xtsim_var
+ meas tran vil_ave AVG v(vil) from=1n to=$&xtsim_var
+ echo --
+ let Av_stg1 = vid_stg2_ave/vid_stg1_ave
+ print Av_stg1
+ echo --
+ let Av_stg2 = vo_ave/vid_stg2_ave
+ print Av_stg2 
+ echo -- 
+ let Av_ina = vo_ave/vid_stg1_ave
+ print Av_ina 
+ echo -- 
+ let ge_stg1_per = ((($&Av_stg1)-($&xAv_stg1_var))/$&xAv_stg1_var)*100
+ print ge_stg1_per
+ echo --
+ let ge_stg2_per = ((($&Av_stg2)-($&xAv_stg2_var))/$&xAv_stg2_var)*100
+ print ge_stg2_per
+ echo -- 
+ let ge_ina_per = ((($&Av_ina)-($&xAv_ina_var))/$&xAv_ina_var)*100
+ print ge_ina_per
+ echo --
+ let ge_stg1_expected_per = (1/$&lg_stg1_var)*100
+ print ge_stg1_expected_per
+ echo -- 
+ let ge_stg2_expected_per = (1/$&lg_stg2_var)*100
+ print ge_stg2_expected_per
+ echo -- 
+ let ge_ina_expected_per = ($&ge_stg1_expected_per)+($&ge_stg2_expected_per)
+ print ge_ina_expected_per
+ echo --  
+ echo \\"$&xdec_code_var\\" >> code_measures.txt
+ 
+** 4. AC ANALYSIS ** 
+  
+  ac dec 10 1 10G
+  
+  remzerovec 
+  write tb_sunrise_ina_ac.raw
+ 
+
+** 5. AC MEASURES **
+
+  echo --   
+  let n45_rads = -45*(pi/180) 
+  meas AC BW WHEN vp(vout)=n45_rads CROSS=1
+  let BW_kHz = $&BW/1000
+  echo BW_kHz = \\"$&BW_kHz\\"
+  echo --
+  
+** 6. DC ANALYSIS ** 
+  
+  dc Vvind 0 $&xvin_diff_for_vout_max_var $&xdc_step_var
+  * below variable outputted for octave plot. 
+  * Note: Anytime a new variable gets added the octave script needs to be updated. 
+  echo --
+  let numsteps4octave = ($&xvin_diff_for_vout_max_var/$&xdc_step_var)+1
+  print numsteps4octave
+  echo -- 
+  remzerovec
+  set filetype=binary
+  write tb_sunrise_ina_dc.raw
+  set filetype=ascii
+  write tb_sunrise_ina_dc_ascii.raw
+  
+** 7. AC NOISE ANALYSIS **   
+
+  let xfmax = 100Meg
+
+  noise v(vout) Vvdda dec 10 10 $&xfmax 1
+
+  setplot noise2
+  set filetype=binary
+  remzerovec
+  write tb_sunrise_ina_noise_density.raw
+  let vnoise_op_int = sqrt(integ(onoise_spectrum*onoise_spectrum))
+  
+  * generice code to measure noise densities at specified frequencies
+  
+  let freq_density1 = 1k
+  let freq_density2 = 10k
+  let freq_density3 = 100k
+  
+  let nn = 0
+  while frequency[nn] < $&freq_density1
+  let nn = nn + 1
+  end
+  * define vectors of frequncies and values just above and below
+  * selected frequeny
+  let fnn = frequency[nn]
+  let nn1 = nn + 1
+  let fnn1 = frequency[nn1]
+  let snn = onoise_spectrum[nn]
+  let snn1 = onoise_spectrum[nn1]
+  *print vector values
+  echo -- 
+  echo nn = \\"$&nn\\"  freq_density1 = \\"$&fnn\\"  noise_density1 = \\"$&snn\\"
+  echo nn1 = \\"$&nn1\\"  freq_density1+ = \\"$&fnn1\\"  noise_density1+ = \\"$&snn1\\"
+  *linear interpolation for exact frequency
+  let newsnn = snn1 + (snn - snn1)/(fnn - fnn1)*($&freq_density1 - fnn1)
+  echo  freq_density1 = \\"$&freq_density1\\"  noise_density1_interp = \\"$&newsnn\\"
+  echo --  
+  
+  let nn = 0
+  while frequency[nn] < $&freq_density2
+  let nn = nn + 1
+  end
+  * define vectors of frequncies and values just above and below
+  * selected frequeny
+  let fnn = frequency[nn]
+  let nn1 = nn + 1
+  let fnn1 = frequency[nn1]
+  let snn = onoise_spectrum[nn]
+  let snn1 = onoise_spectrum[nn1]
+  *print vector values
+  echo -- 
+  echo nn = \\"$&nn\\"  freq_density2 = \\"$&fnn\\"  noise_density2 = \\"$&snn\\"
+  echo nn1 = \\"$&nn1\\"  freq_density2+ = \\"$&fnn1\\"  noise_density2+ = \\"$&snn1\\"
+  *linear interpolation for exact frequency
+  let newsnn = snn1 + (snn - snn1)/(fnn - fnn1)*($&freq_density2 - fnn1)
+  echo  freq_density2 = \\"$&freq_density2\\"  noise_density2_interp = \\"$&newsnn\\"
+  echo --  
+  
+  let nn = 0
+  while frequency[nn] < $&freq_density3
+  let nn = nn + 1
+  end
+  * define vectors of frequncies and values just above and below
+  * selected frequeny
+  let fnn = frequency[nn]
+  let nn1 = nn + 1
+  let fnn1 = frequency[nn1]
+  let snn = onoise_spectrum[nn]
+  let snn1 = onoise_spectrum[nn1]
+  *print vector values
+  echo -- 
+  echo nn = \\"$&nn\\"  freq_density3 = \\"$&fnn\\"  noise_density3 = \\"$&snn\\"
+  echo nn1 = \\"$&nn1\\"  freq_density3+ = \\"$&fnn1\\"  noise_density3+ = \\"$&snn1\\"
+  *linear interpolation for exact frequency
+  let newsnn = snn1 + (snn - snn1)/(fnn - fnn1)*($&freq_density3 - fnn1)
+  echo  freq_density3 = \\"$&freq_density3\\"  noise_density1_interp = \\"$&newsnn\\"
+  echo --  
+
+  setplot noise3
+  print v(onoise_total)
+  set filetype=ascii
+  remzerovec
+  write tb_sunrise_ina_integrated_noise.raw
+  
+** 8. AC ANALYSIS ** 
+ 
+  ac dec 10 1 1G
+  
+  remzerovec 
+  write tb_sunrise_ina_ac.raw
+  
+  setplot
+*quit 0
+.endc
+
+
+"}
+C {launcher.sym} 400 -240 0 0 {name=h1
+descr="load_TRAN_waveforms" 
+tclcommand="xschem raw_read $netlist_dir/tb_sunrise_ina_tran.raw tran"
+
+
+}
+C {devices/lab_wire.sym} -990 -40 1 1 {name=p16 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -990 -140 3 1 {name=p17 sig_type=std_logic lab=vdda
+
+}
+C {launcher.sym} 1600 -240 0 0 {name=h3
+descr="load_AC_waveforms" 
+tclcommand="xschem raw_read $netlist_dir/tb_sunrise_ina_ac.raw ac"
+
+
+}
+C {OTA.sym} -780 780 0 0 {name=xota3
+xschematic=OTA_ideal_order0_vloga.sch
+xschematic=OTA_ideal_order1_element.sch
+schematic=OTA_ideal_order1_element_wos.sch
+}
+C {res.sym} -1010 560 1 0 {name=R1
+value="\{xRin_stg2*1.00\} noisy=xnoise_stg2"
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -1010 1180 1 0 {name=R5
+value="\{xRin_stg2*1.00\} noisy=xnoise_stg2"
+footprint=1206
+device=resistor
+m=1}
+C {devices/isource.sym} -900 670 0 0 {name=Iisnk3 value=xibias}
+C {devices/lab_wire.sym} -890 720 0 1 {name=p18 sig_type=std_logic lab=ibias3
+
+}
+C {devices/lab_wire.sym} -860 620 0 1 {name=p19 sig_type=std_logic lab=vdda
+
+}
+C {res.sym} -830 560 1 0 {name=R6
+value="\{xRfb_stg2*1.00\} noisy=xnoise_stg2"
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_wire.sym} -780 820 1 1 {name=p21 sig_type=std_logic lab=vssa
+
+}
+C {res.sym} -830 1180 1 0 {name=R7
+value="\{xRfb_stg2*1.00\} noisy=xnoise_stg2"
+footprint=1206
+device=resistor
+m=1}
+C {devices/capa.sym} -560 810 0 0 {name=C1
+m=1
+value=\{xCload\}
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_wire.sym} -560 740 0 1 {name=p23 sig_type=std_logic lab=vout
+
+}
+C {devices/lab_wire.sym} -1110 560 0 1 {name=p3 sig_type=std_logic lab=vih
+
+}
+C {devices/lab_wire.sym} -1100 1180 0 1 {name=p2 sig_type=std_logic lab=vil
+}
+C {OTA.sym} -1460 600 0 0 {name=xota1
+xschematic=OTA_ideal_order0_vloga.sch
+xschematic=OTA_ideal_order1_element.sch
+schematic=OTA_ideal_order1_element_wos.sch
+}
+C {OTA.sym} -1460 1220 0 0 {name=xota2
+xschematic=OTA_ideal_order0_vloga.sch
+xschematic=OTA_ideal_order1_element.sch
+schematic=OTA_ideal_order1_element_wos.sch
+}
+C {devices/lab_wire.sym} -1460 640 1 1 {name=p8 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -1580 1320 0 1 {name=p9 sig_type=std_logic lab=vssa
+
+}
+C {devices/isource.sym} -1580 1110 0 0 {name=Iisnk1 value=xibias}
+C {devices/lab_wire.sym} -1570 1160 0 1 {name=p10 sig_type=std_logic lab=ibias2
+
+}
+C {devices/lab_wire.sym} -1540 1060 0 1 {name=p11 sig_type=std_logic lab=vdda
+
+}
+C {devices/lab_wire.sym} -1540 440 0 1 {name=p13 sig_type=std_logic lab=vdda
+
+}
+C {devices/vsource.sym} -1680 1250 0 0 {name=Vvin value="xvin_cm  ac 1"
+format="@name @pinlist @value"}
+C {devices/vsource.sym} -1680 730 0 0 {name=Vvind value="xvin_diff ac 1"
+format="@name @pinlist @value"
+}
+C {devices/lab_wire.sym} -1640 1180 0 1 {name=p14 sig_type=std_logic lab=vinn
+
+}
+C {devices/lab_wire.sym} -1640 560 0 1 {name=p15 sig_type=std_logic lab=vinp_wos
+
+}
+C {res.sym} -1220 650 0 0 {name=R3
+value="\{xRfb_stg1*1.000\} noisy=xnoise_stg1_nia"
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} -1220 1090 0 0 {name=R4
+value="\{xRfb_stg1*1.000\} noisy=xnoise_stg1_ia"
+footprint=1206
+device=resistor
+m=1}
+C {vcvs.sym} -560 1320 0 0 {name=E1 value=1}
+C {devices/lab_wire.sym} -560 1370 1 1 {name=p12 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -640 1300 0 1 {name=p24 sig_type=std_logic lab=vinp
+
+}
+C {devices/lab_wire.sym} -640 1340 0 1 {name=p25 sig_type=std_logic lab=vinn
+
+}
+C {devices/lab_wire.sym} -550 1260 0 1 {name=p26 sig_type=std_logic lab=vin_diff
+
+
+}
+C {devices/isource.sym} -1580 490 0 0 {name=Iisnk2 value=xibias}
+C {devices/lab_wire.sym} -1570 540 0 1 {name=p1 sig_type=std_logic lab=ibias1
+
+}
+C {vcvs.sym} -200 1320 0 0 {name=E2 value=1}
+C {devices/lab_wire.sym} -200 1370 1 1 {name=p4 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -280 1300 0 1 {name=p5 sig_type=std_logic lab=vih
+
+}
+C {devices/lab_wire.sym} -280 1340 0 1 {name=p7 sig_type=std_logic lab=vil
+
+}
+C {devices/lab_wire.sym} -190 1260 0 1 {name=p27 sig_type=std_logic lab=vin_stg2_diff
+
+
+}
+C {devices/lab_wire.sym} -1520 700 0 1 {name=p28 sig_type=std_logic lab=vfb_ni
+}
+C {devices/lab_wire.sym} -1540 1260 0 1 {name=p30 sig_type=std_logic lab=vfb_i
+}
+C {devices/lab_wire.sym} -940 740 0 1 {name=p31 sig_type=std_logic lab=vip_stg2
+
+}
+C {devices/lab_wire.sym} -940 760 0 1 {name=p32 sig_type=std_logic lab=vin_stg2
+
+}
+C {devices/lab_wire.sym} -770 -40 1 1 {name=p33 sig_type=std_logic lab=vssa
+
+}
+C {devices/vsource.sym} -770 -90 0 0 {name=Vvref value="xvref"
+format="@name @pinlist @value"}
+C {devices/lab_wire.sym} -770 -140 3 1 {name=p20 sig_type=std_logic lab=vss_pcb
+
+}
+C {devices/lab_wire.sym} -560 860 1 1 {name=p22 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -620 560 0 1 {name=p34 sig_type=std_logic lab=vss_pcb
+
+}
+C {noconn.sym} -500 1260 2 0 {name=l2}
+C {noconn.sym} -140 1260 2 0 {name=l3}
+C {launcher.sym} 2380 -240 0 0 {name=h2
+descr="load_DC_waveforms" 
+tclcommand="xschem raw_read $netlist_dir/tb_sunrise_ina_dc.raw ac"
+
+
+}
+C {devices/vsource.sym} -1680 630 0 0 {name=Vvos value="\{xvos*sqrt(2)\}"
+format="@name @pinlist @value"
+}
+C {devices/lab_wire.sym} -1680 690 0 1 {name=p29 sig_type=std_logic lab=vinp
+
+}
+C {vcvs.sym} -380 1320 0 0 {name=E3 value=1}
+C {devices/lab_wire.sym} -380 1370 1 1 {name=p35 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -460 1300 0 1 {name=p36 sig_type=std_logic lab=vinp_wos
+
+}
+C {devices/lab_wire.sym} -460 1340 0 1 {name=p37 sig_type=std_logic lab=vinn
+
+}
+C {devices/lab_wire.sym} -370 1260 0 1 {name=p38 sig_type=std_logic lab=vin_diff_wos
+
+
+}
+C {noconn.sym} -320 1260 2 0 {name=l4}
+C {devices/lab_wire.sym} -1280 970 3 0 {name=p39 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -1260 790 3 1 {name=p40 sig_type=std_logic lab=vdda_lv
+
+}
+C {devices/lab_wire.sym} -1510 880 0 1 {name=p41 sig_type=std_logic lab=rdac_ctrl_1,rdac_ctrl_0
+
+}
+C {devices/lab_wire.sym} -1300 790 3 1 {name=p42 sig_type=std_logic lab=vdda
+
+}
+C {devices/vsource.sym} -890 -90 0 0 {name=Vvdda_lv value="xvdda_lv"
+format="@name @pinlist @value"}
+C {devices/lab_wire.sym} -890 -40 1 1 {name=p43 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -890 -140 3 1 {name=p44 sig_type=std_logic lab=vdda_lv
+
+}
+C {dec2bin_10b.sym} -1510 190 0 0 {name=xidec2bin
+xschematic=dec2bin_10b.sch
+model=dec2bin_10b
+dec_code = dec_code_var}
+C {devices/lab_wire.sym} -1680 120 0 0 {name=p45 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -1680 100 0 0 {name=p46 sig_type=std_logic lab=vdda_lv
+
+}
+C {devices/lab_pin.sym} -1320 100 2 0 {name=p47 sig_type=std_logic lab=bin_out_9}
+C {devices/lab_pin.sym} -1320 120 2 0 {name=p48 sig_type=std_logic lab=bin_out_8}
+C {devices/lab_pin.sym} -1320 140 2 0 {name=p49 sig_type=std_logic lab=bin_out_7}
+C {devices/lab_pin.sym} -1320 160 2 0 {name=p50 sig_type=std_logic lab=bin_out_6}
+C {devices/lab_pin.sym} -1320 180 2 0 {name=p51 sig_type=std_logic lab=bin_out_5}
+C {devices/lab_pin.sym} -1320 200 2 0 {name=p52 sig_type=std_logic lab=bin_out_4}
+C {devices/lab_pin.sym} -1320 220 2 0 {name=p53 sig_type=std_logic lab=bin_out_3}
+C {devices/lab_pin.sym} -1320 240 2 0 {name=p54 sig_type=std_logic lab=bin_out_2}
+C {devices/lab_pin.sym} -1320 260 2 0 {name=p55 sig_type=std_logic lab=rdac_ctrl_1}
+C {devices/lab_pin.sym} -1320 280 2 0 {name=p56 sig_type=std_logic lab=rdac_ctrl_0}
+C {noconn.sym} -1320 100 1 0 {name=l5}
+C {noconn.sym} -1320 120 1 0 {name=l6}
+C {noconn.sym} -1320 140 1 0 {name=l7}
+C {noconn.sym} -1320 160 1 0 {name=l8}
+C {noconn.sym} -1320 180 1 0 {name=l9}
+C {noconn.sym} -1320 200 1 0 {name=l10}
+C {noconn.sym} -1320 220 1 0 {name=l11}
+C {noconn.sym} -1320 240 1 0 {name=l12}
+C {devices/vsource.sym} -990 -90 0 0 {name=Vvdda value="xvdda"
+format="@name @pinlist @value"}
+C {rdac.sym} -1220 980 0 0 {name=xIrdac
+xschematic=rdac_real_sws.sch
+schematic=rdac_ideal_sws.sch
+xschematic=rdac_no_sws_av1.sch
+xschematic=rdac_no_sws_av5.sch
+xschematic=rdac_no_sws_av11.sch
+xschematic=rdac_no_sws_av21.sch
+}
+C {launcher.sym} 3030 -240 0 0 {name=h4
+descr="load_noise_waveforms" 
+tclcommand="xschem raw_read $netlist_dir/tb_sunrise_ina_noise_density.raw noise"
+
+
+}
+C {launcher.sym} 3850 -240 0 0 {name=h5
+descr="load_CMR_waveforms" 
+tclcommand="xschem raw_read $netlist_dir/tb_sunrise_ina_noise_ac.raw ac"
+
+
+}
+C {devices/launcher.sym} -1020 220 0 0 {name=h6
+descr=load_DCOP
+tclcommand="xschem annotate_op $\{netlist_dir\}/tb_sunrise_ina_dcop.raw"
+}
