@@ -182,7 +182,6 @@ N -430 150 -390 150 {lab=vssa}
 N -390 180 -390 200 {lab=vssa}
 N -70 -400 230 -400 {lab=vdda_hv}
 N -960 -400 -70 -400 {lab=vdda_hv}
-N -960 150 -950 150 {lab=pd}
 N -790 500 210 500 {lab=vnbias_in}
 N -960 440 -790 440 {lab=vnbias_in}
 N 240 -60 260 -60 {lab=vpcasc_in}
@@ -451,7 +450,6 @@ N 1440 -60 1440 40 {lab=vncasc_ab}
 N 1320 -60 1440 -60 {lab=vncasc_ab}
 N 1000 40 1040 40 {lab=vdda_hv}
 N -1440 440 -1440 460 {lab=vnbias_in}
-N -1500 490 -1480 490 {lab=pd}
 N -1440 490 -1400 490 {lab=vssa}
 N 1440 40 1440 60 {lab=vncasc_ab}
 N 1380 90 1400 90 {lab=pd}
@@ -478,6 +476,8 @@ N -270 40 -210 40 {lab=vncasc_ab}
 N 1320 -100 1320 -60 {lab=vncasc_ab}
 N 1320 70 1320 120 {lab=vnbias_ab}
 N 1040 -40 1040 10 {lab=vpbias_ab}
+N -1500 490 -1480 490 {lab=pd}
+N -970 150 -950 150 {lab=pd}
 C {lab_wire.sym} 470 440 0 0 {name=p3 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} 470 280 0 0 {name=p6 sig_type=std_logic lab=vssa}
 C {sg13g2_pr/sg13_hv_nmos.sym} 410 440 0 0 {name=Mactive_nbias_rhs
@@ -662,10 +662,9 @@ model=sg13_hv_nmos
 spiceprefix=X
 }
 C {lab_wire.sym} -430 150 0 1 {name=p93 sig_type=std_logic lab=vssa}
-C {lab_wire.sym} -350 150 0 1 {name=p94 sig_type=std_logic lab=pd}
+C {lab_wire.sym} -350 150 0 1 {name=p94 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -910 180 3 0 {name=p95 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} -390 180 3 0 {name=p96 sig_type=std_logic lab=vssa}
-C {ipin.sym} -960 150 0 0 {name=p14 lab=pd}
 C {ipin.sym} -960 -400 0 0 {name=p15 lab=vdda_hv}
 C {ipin.sym} 240 -60 0 0 {name=p29 lab=vpcasc_in}
 C {opin.sym} 720 -40 0 0 {name=p32 lab=vpgate_drv}
@@ -1016,7 +1015,6 @@ model=sg13_hv_nmos
 spiceprefix=X
 }
 C {lab_wire.sym} -1400 490 0 0 {name=p108 sig_type=std_logic lab=vssa}
-C {lab_wire.sym} -1480 490 0 0 {name=p109 sig_type=std_logic lab=pd}
 C {sg13g2_pr/sg13_hv_nmos.sym} 1420 90 0 0 {name=Mnbias_pd2
 l=0.45u
 w=1u
@@ -1049,3 +1047,5 @@ C {lab_wire.sym} 220 40 0 0 {name=p30 sig_type=std_logic lab=vpcasc_ab}
 C {lab_wire.sym} 1130 140 0 0 {name=p86 sig_type=std_logic lab=vpcasc_ab}
 C {opin.sym} 1040 -40 3 0 {name=p90 lab=vpbias_ab}
 C {lab_wire.sym} -1260 360 0 0 {name=p89 sig_type=std_logic lab=vnbias_in}
+C {ipin.sym} -1500 490 0 0 {name=p92 lab=pd}
+C {lab_wire.sym} -950 150 0 0 {name=p14 sig_type=std_logic lab=vssa}
