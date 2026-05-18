@@ -5,36 +5,45 @@ V {}
 S {}
 F {}
 E {}
-N 240 -220 240 -180 {lab=#net1}
-N 180 -220 240 -220 {lab=#net1}
-N 180 -220 180 -210 {lab=#net1}
-N 240 -180 240 -140 {lab=#net1}
-N 180 -140 240 -140 {lab=#net1}
-N 180 -150 180 -140 {lab=#net1}
-N 180 -180 240 -180 {lab=#net1}
-N 240 -180 320 -180 {lab=#net1}
-N 380 -180 440 -180 {lab=vout}
-N 40 -180 140 -180 {lab=vin}
-N 40 -140 60 -140 {lab=vssa}
+T {R = 4546 => R/2 = Rz (class AB)
+C = 40p => 2C = Cc (class AB)} 160 -240 0 0 0.4 0.4 {}
+T {Shielded to vssa
+} 580 -140 0 0 0.2 0.2 {
+}
+T {Shielded to vssa
+} 40 -130 0 0 0.2 0.2 {
+}
+N 320 -100 380 -100 {lab=#net1}
+N 560 -100 620 -100 {lab=vout}
+N 60 -100 120 -100 {lab=vin}
+N 360 -80 380 -80 {lab=vssa}
+N 80 -80 120 -80 {lab=vssa}
 C {sunrise/title_slice.sym} -180 80 0 0 {name=l1 author="Diarmuid Collins"
 company="SLICE Semiconductor"}
-C {sg13g2_pr/sg13_hv_pmos.sym} 160 -180 0 0 {name=Mactive_pbias_lhs2
-l=10u
-w=10u
-ng=1
-m=100
-model=sg13_hv_pmos
-spiceprefix=X
+C {ipin.sym} 360 -80 0 0 {name=p1 lab=vssa}
+C {sunrise/sunrise_opamp_Cc.sym} 200 -160 0 0 {name=xCc
+
+xSCH:
+schematic=sunrise_opamp_Cc.sch
+
+xRCX:
+xschematic=sunrise_opamp_Cc_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_Cc/PEX/sunrise_opamp_Cc_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_Cc/PEX/sunrise_opamp_Cc_flat_rcx.spice)"
+
+xRCX:
+xschematic=sunrise_opamp_Cc_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_Cc/PEX/sunrise_opamp_Cc_flat_rcx_old.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_Cc/PEX/sunrise_opamp_Cc_flat_rcx_old.spice)"
+
+xCX:
+xschematic=sunrise_opamp_Cc_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_Cc/PEX/sunrise_opamp_Cc_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_Cc/PEX/sunrise_opamp_Cc_flat_cx.spice)"
+
+
 }
-C {sg13g2_pr/rppd.sym} 350 -180 1 0 {name=R3
-w=0.5e-6
-l=8.658e-6
-model=rppd
-body=vssa
-spiceprefix=X
-b=0
-m=1
-}
-C {opin.sym} 440 -180 0 0 {name=p2 lab=vout}
-C {ipin.sym} 40 -180 0 0 {name=p3 lab=vin}
-C {ipin.sym} 40 -140 0 0 {name=p1 lab=vssa}
+C {opin.sym} 620 -100 0 0 {name=p4 lab=vout}
+C {ipin.sym} 60 -100 0 0 {name=p2 lab=vin}
+C {sunrise/sunrise_opamp_Rz.sym} 480 -160 0 0 {name=xRz}
+C {lab_wire.sym} 110 -80 0 0 {name=p3 sig_type=std_logic lab=vssa}
