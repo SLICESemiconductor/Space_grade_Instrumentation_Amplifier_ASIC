@@ -6,26 +6,27 @@ S {}
 F {}
 E {}
 B 2 500 -240 1300 160 {flags=graph
-y1=1.5
-y2=1.6
+y1=0
+y2=1.5
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.2e-06
+x1=6e-08
+x2=1.26e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node=ro_en
-color=4
 dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/tb_sunrise_ro_tran.raw}
+rawfile=$netlist_dir/tb_sunrise_ro_tran.raw
+sim_type=tran
+color=4
+node=clk_ext}
 B 2 500 180 1300 580 {flags=graph
 y1=-0.016
 y2=1.6
@@ -34,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.2e-06
+x1=1.0228645e-06
+x2=1.1649691e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -64,8 +65,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.9826329e-07
-x2=7.5124812e-07
+x1=6e-08
+x2=1.26e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -90,27 +91,27 @@ autoload=1
 legend=1
 vlegend=1}
 B 2 1320 180 2120 580 {flags=graph
-y1=-0.22678885
-y2=1.7724111
+y1=0.32338955
+y2=1.7662695
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.2e-06
+x1=1.0228645e-06
+x2=1.1649691e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="ro_out_buf
+node="xro_out_buf
 
-\\"SCH;xro_out_buf %$netlist_dir/tb_sunrise_ro_tran_sch.raw\\"
-\\"PEX_RC;xro_out_buf %$netlist_dir/tb_sunrise_ro_tran_rc.raw\\"
-\\"PEX_C;xro_out_buf %$netlist_dir/tb_sunrise_ro_tran_c.raw\\"
+\\"SCH;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_sch.raw\\"
+\\"PEX_RC;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_rc.raw\\"
+\\"PEX_C;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_c.raw\\"
 \\"PEX_FE;xro_out_buf %$netlist_dir/tb_sunrise_ro_tran_fe.raw\\"
 \\"PEX_RC_npg;xro_out_buf %$netlist_dir/tb_sunrise_ro_tran_rc_npg.raw\\"
-\\"PEX_R;xro_out_buf %$netlist_dir/tb_sunrise_ro_tran_r.raw\\""
+\\"PEX_R;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_r.raw\\""
 color="4 11 21 12 10 17 8"
 dataset=-1
 unitx=1
@@ -118,7 +119,6 @@ logx=0
 logy=0
 rawfile=$netlist_dir/tb_sunrise_ro_tran.raw
 hilight_wave=3
-hcursor1_y=0.75
 vlegend=1
 autoload=1}
 B 2 500 600 1300 1000 {flags=graph
@@ -129,8 +129,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.2e-06
+x1=1.0228645e-06
+x2=1.1649691e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -143,6 +143,33 @@ rawfile=$netlist_dir/tb_sunrise_ro_tran.raw
 hilight_wave=0
 color=21
 node="i(vvdda_lv) -1 *"}
+B 2 1320 600 2120 1000 {flags=graph
+y1=-0.017580059
+y2=1.530708
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1.0228645e-06
+x2=1.1649691e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"SCH;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_sch.raw\\"
+\\"PEX_RC;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_rc.raw\\"
+\\"PEX_C;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_c.raw\\"
+\\"PEX_R;ro_out_buf %$netlist_dir/tb_sunrise_ro_tran_r.raw\\""
+color="4 8 17 18"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rawfile=$netlist_dir/tb_sunrise_ro_tran.raw
+hilight_wave=3
+vlegend=1
+autoload=1}
 T {TRANSIENT RESPONSE} 650 -350 0 0 0.4 0.4 {}
 N -500 150 -500 170 {
 lab=GND}
@@ -158,7 +185,7 @@ N -20 820 -20 860 {lab=vssa}
 N -20 660 -20 760 {lab=ro_out_buf}
 N -660 680 -600 680 {lab=ro_en}
 N -220 860 -20 860 {lab=vssa}
-N -660 660 -600 660 {lab=cdac_sel_5,cdac_sel_4,cdac_sel_3,cdac_sel_2,cdac_sel_1,cdac_sel_0}
+N -720 660 -600 660 {lab=cdac_sel_5,cdac_sel_4,cdac_sel_3,cdac_sel_2,cdac_sel_1,cdac_sel_0}
 N -280 30 -260 30 {lab=vssa}
 N -280 10 -260 10 {lab=vdda_lv}
 N 40 10 80 10 {lab=bin_out_9}
@@ -171,7 +198,7 @@ N 40 130 80 130 {lab=cdac_sel_3}
 N 40 150 80 150 {lab=cdac_sel_2}
 N 40 170 80 170 {lab=cdac_sel_1}
 N 40 190 80 190 {lab=cdac_sel_0}
-N -660 160 -660 660 {lab=cdac_sel_5,cdac_sel_4,cdac_sel_3,cdac_sel_2,cdac_sel_1,cdac_sel_0}
+N -720 160 -720 660 {lab=cdac_sel_5,cdac_sel_4,cdac_sel_3,cdac_sel_2,cdac_sel_1,cdac_sel_0}
 N -440 540 -440 580 {
 lab=vdda_lv}
 N -300 680 -220 680 {lab=ro_out}
@@ -181,6 +208,18 @@ N -440 860 -220 860 {lab=vssa}
 N -300 660 -20 660 {lab=ro_out_buf}
 N -440 720 -440 860 {lab=vssa}
 N -660 860 -440 860 {lab=vssa}
+N -640 620 -600 620 {
+lab=clk_ext}
+N -640 640 -600 640 {
+lab=clk_int_en}
+N -500 360 -500 400 {
+lab=vssa}
+N -500 260 -500 300 {
+lab=clk_int_en}
+N -160 380 -160 420 {
+lab=vssa}
+N -160 280 -160 320 {
+lab=clk_ext}
 C {devices/vsource.sym} -500 120 0 0 {name=Vvssa value=0
 format="@name @pinlist @value"}
 C {devices/gnd.sym} -500 170 0 0 {name=l1 lab=GND}
@@ -208,20 +247,24 @@ C {devices/code.sym} 250 -260 0 0 {name=STIM_FILE only_toplevel=false value="** 
 * SG13CMOS5L STD CELLS
 .include /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13cmos5l/libs.ref/sg13cmos5l_stdcell/spice/sg13cmos5l_stdcell.spice
 *ftyp
-*.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
-*.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
+.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ
 *fmax
 *.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_ss
 *.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_bcs
 *fmin
-.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_ff
-.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_wcs
+*.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_ff
+*.lib /home/slice/pdk/iHP/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_wcs
+
+* required because I used the filler std cells in error that create 6 floating wells which ngspice cant converge on.
+* should have used decap std cells and was too much effort to change. use decap cells in future. 
+.option rshunt=1e22
 
 
 ** PARAMETERS **
 
 * global parameters
-.param xvdda_lv = 1.5
+.param xvdda_lv = 1.425
 .csparam xvdda_lv_var = 'xvdda_lv'
 .param xvdda_hv = 3.3
 .csparam xvdda_hv_var = 'xvdda_hv'
@@ -233,7 +276,10 @@ C {devices/code.sym} 250 -260 0 0 {name=STIM_FILE only_toplevel=false value="** 
 .csparam xtstep_var = 'xtstep'
 .param dec_code_var = 12
 .param xCload = 5p
+.param xtrf = 20p
+.param xfreq = 10e6
 .param xCpar = 0f
+.param xclk_int_en = 1
 .param xCload_out = 1p
 .param xCload_int = 1p
 .param xCdac_unit = 300f
@@ -253,13 +299,13 @@ C {devices/code.sym} 250 -260 0 0 {name=STIM_FILE only_toplevel=false value="** 
 
 * below line needs to be included if running ac noise analysys
 *.save all
-.save v(ro_out) v(ro_out_buf) i(vvdda_lv) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n0) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n1) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n2) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n3) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n4) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n5) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n6) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n7) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n8) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n9) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n10)
+.save v(ro_out) v(ro_out_buf) i(vvdda_lv) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n0) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n1) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n2) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n3) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n4) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n5) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n6) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n7) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n8) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n9) v(xro_core_wcdac_buf.xro_wcdac.xro_core.n10) v(clk_ext)
 
 *.option savecurrents
 
 .control
 
-  let xdec_code_var = 12
+  let xdec_code_var = 31
   
    repeat  1              ; loop start
    alterparam dec_code_var = $&xdec_code_var;        ; alter the decimal code
@@ -323,7 +369,9 @@ pre_osdi dec2bin_10b.osdi
         meas tran Tro89 TRIG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var FALL=8 TARG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var FALL=9
   let Tro = (Tro23+Tro45+Tro67+Tro89)/4
   let freq_ro_MHz=(1/Tro)*1e-6
-  meas tran pw TRIG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var RISE=1 TARG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var FALL=2
+  meas tran pw TRIG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var RISE=3 TARG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var FALL=4
+  * below measures pw for an external clk
+  *meas tran pw TRIG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var RISE=3 TARG v(ro_out_buf) VAL=0.5*$&xvdda_lv_var FALL=3
   let D_cyc_per=(pw/Tro)*100
   meas tran n0_max MAX v(xro_core_wcdac_buf.xro_wcdac.xro_core.n0) from=1n to=$&xtsim_var 
   meas tran n0_min MIN v(xro_core_wcdac_buf.xro_wcdac.xro_core.n0) from=1n to=$&xtsim_var 
@@ -1096,7 +1144,7 @@ simulate
 
 }
 C {lab_wire.sym} -640 680 0 1 {name=p5 sig_type=std_logic lab=ro_en}
-C {devices/lab_wire.sym} -660 650 3 1 {name=p85 sig_type=std_logic lab=cdac_sel_5,cdac_sel_4,cdac_sel_3,cdac_sel_2,cdac_sel_1,cdac_sel_0
+C {devices/lab_wire.sym} -720 650 3 1 {name=p85 sig_type=std_logic lab=cdac_sel_5,cdac_sel_4,cdac_sel_3,cdac_sel_2,cdac_sel_1,cdac_sel_0
 
 }
 C {dec2bin_10b.sym} -110 100 0 0 {name=xidec2bin
@@ -1292,9 +1340,9 @@ xschematic=sunrise_ro_core_wcdac_buf_g2.sch
 xschematic=sunrise_ro_core_wcdac_buf_5l.sch
 
 xRCX:
-*schematic=sunrise_ro_core_wcdac_buf_flat
-*spice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ringosc/LAYOUT/sunrise_ro_core_wcdac_buf/PEX/sunrise_ro_core_wcdac_buf_flat_rcx.spice)"
-*tclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ringosc/LAYOUT/sunrise_ro_core_wcdac_buf/PEX/sunrise_ro_core_wcdac_buf_flat_rcx.spice)"
+xschematic=sunrise_ro_core_wcdac_buf_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ringosc/LAYOUT/sunrise_ro_core_wcdac_buf/PEX/sunrise_ro_core_wcdac_buf_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ringosc/LAYOUT/sunrise_ro_core_wcdac_buf/PEX/sunrise_ro_core_wcdac_buf_flat_rcx.spice)"
 
 xCX:
 xschematic=sunrise_ro_core_wcdac_buf_flat
@@ -1320,4 +1368,29 @@ xRX_npgr:
 xschematic=sunrise_ro_core_wcdac_buf_flat
 xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ringosc/LAYOUT/sunrise_ro_core_wcdac_buf/PEX/sunrise_ro_core_wcdac_buf_flat_rx_npgr.spice)"
 xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ringosc/LAYOUT/sunrise_ro_core_wcdac_buf/PEX/sunrise_ro_core_wcdac_buf_flat_rx_npgr.spice)"
+}
+C {devices/lab_wire.sym} -640 620 0 1 {name=p3 sig_type=std_logic lab=clk_ext
+
+}
+C {devices/lab_wire.sym} -640 640 0 1 {name=p8 sig_type=std_logic lab=clk_int_en
+
+}
+C {devices/vsource.sym} -500 330 0 0 {name=Vvdda_lv1 value=\{xvdda_lv*xclk_int_en\}
+format="@name @pinlist @value"
+}
+C {devices/lab_wire.sym} -500 380 1 1 {name=p9 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -500 280 3 1 {name=p10 sig_type=std_logic lab=clk_int_en
+
+}
+C {vsource.sym} -160 350 0 0 {name=Vsquare value="PULSE(0 xvdda_lv 0 xtrf xtrf \{\{0.5/xfreq\}-xtrf\}\{\{1/xfreq\}-xtrf\})"
+format="@name @pinlist @value"
+
+}
+C {devices/lab_wire.sym} -160 400 1 1 {name=p11 sig_type=std_logic lab=vssa
+
+}
+C {devices/lab_wire.sym} -160 300 3 1 {name=p12 sig_type=std_logic lab=clk_ext
+
 }
