@@ -17,7 +17,6 @@ L 2 2460 -220 2460 100 {}
 L 2 1620 100 2460 100 {}
 L 2 1620 -220 1620 100 {}
 L 2 1620 140 2460 140 {}
-L 2 2460 140 2460 460 {}
 L 2 1620 460 2460 460 {}
 L 2 1620 140 1620 460 {}
 L 2 1620 500 2460 500 {}
@@ -67,6 +66,9 @@ L 2 1320 520 1330 510 {}
 L 2 1320 520 1330 530 {}
 L 2 1050 -370 1060 -360 {}
 L 2 1050 -350 1060 -360 {}
+L 2 2460 140 2920 140 {}
+L 2 2920 140 2920 460 {}
+L 2 2460 460 2920 460 {}
 A 2 1317 -343 18.38477631085023 157.6198649480404 360 {}
 A 2 1317 -323 18.38477631085023 157.6198649480404 360 {}
 A 2 1037 437 18.38477631085023 157.6198649480404 360 {}
@@ -79,7 +81,7 @@ T {50u} 410 560 0 0 0.4 0.4 {}
 T {Used to test CMFB
 Shorted 2 lvls up} -510 200 0 0 0.2 0.2 {}
 T {diff pair dummies} 2090 570 0 0 0.4 0.4 {}
-T {nbias/casc dummies} 2230 370 0 0 0.4 0.4 {}
+T {nbias/casc dummies} 2230 380 0 0 0.4 0.4 {}
 T {pbias/casc dummies} 2140 -500 0 0 0.4 0.4 {}
 T {ab_ctrl dummies} 2240 -70 0 0 0.4 0.4 {}
 T {DUMMIES} 1980 -740 0 0 0.4 0.4 {}
@@ -134,7 +136,6 @@ N -70 -60 70 -60 {lab=vpdio}
 N -70 -90 -70 -60 {lab=vpdio}
 N 70 -300 70 -60 {lab=vpdio}
 N -30 -300 70 -300 {lab=vpdio}
-N -490 -220 430 -220 {lab=vd_pbias_rhs}
 N 430 -270 430 -220 {lab=vd_pbias_rhs}
 N 430 -40 430 -20 {lab=vpgate_drv}
 N 430 160 430 250 {lab=vngate_drv}
@@ -188,9 +189,9 @@ N 240 -60 260 -60 {lab=vpcasc_in}
 N 260 -120 260 -60 {lab=vpcasc_in}
 N -30 -120 260 -120 {lab=vpcasc_in}
 N 130 40 230 40 {lab=vpcasc_ab}
-N 430 160 720 160 {lab=vngate_drv}
+N 700 160 720 160 {lab=vngate_drv}
 N 430 100 430 160 {lab=vngate_drv}
-N 430 -40 720 -40 {lab=vpgate_drv}
+N 700 -40 720 -40 {lab=vpgate_drv}
 N 430 -90 430 -40 {lab=vpgate_drv}
 N -650 180 -640 180 {lab=cmfb_out}
 N -650 220 -640 220 {lab=cmfb_in}
@@ -346,46 +347,6 @@ N 2260 -300 2320 -300 {lab=vdda_hv}
 N 2260 -380 2260 -300 {lab=vdda_hv}
 N 2320 -300 2360 -300 {lab=vdda_hv}
 N 2360 -380 2360 -300 {lab=vdda_hv}
-N 1910 -40 1910 -10 {lab=vssa}
-N 1910 20 1950 20 {lab=vssa}
-N 1850 20 1870 20 {lab=vssa}
-N 1910 50 1910 80 {lab=vssa}
-N 1850 80 1910 80 {lab=vssa}
-N 1850 20 1850 80 {lab=vssa}
-N 1910 80 1950 80 {lab=vssa}
-N 1950 20 1950 80 {lab=vssa}
-N 1950 -40 1950 20 {lab=vssa}
-N 1910 -40 1950 -40 {lab=vssa}
-N 1890 -200 1890 -170 {lab=vdda_hv}
-N 1850 -140 1890 -140 {lab=vdda_hv}
-N 1930 -140 1950 -140 {lab=vdda_hv}
-N 1950 -140 1950 -90 {lab=vdda_hv}
-N 1890 -90 1950 -90 {lab=vdda_hv}
-N 1890 -110 1890 -90 {lab=vdda_hv}
-N 1850 -90 1890 -90 {lab=vdda_hv}
-N 1850 -140 1850 -90 {lab=vdda_hv}
-N 1850 -200 1850 -140 {lab=vdda_hv}
-N 1850 -200 1890 -200 {lab=vdda_hv}
-N 2020 -200 2020 -170 {lab=vdda_hv}
-N 1980 -140 2020 -140 {lab=vdda_hv}
-N 2060 -140 2080 -140 {lab=vdda_hv}
-N 2080 -140 2080 -90 {lab=vdda_hv}
-N 2020 -90 2080 -90 {lab=vdda_hv}
-N 2020 -110 2020 -90 {lab=vdda_hv}
-N 1980 -90 2020 -90 {lab=vdda_hv}
-N 1980 -140 1980 -90 {lab=vdda_hv}
-N 1980 -200 1980 -140 {lab=vdda_hv}
-N 1980 -200 2020 -200 {lab=vdda_hv}
-N 2080 -40 2080 -10 {lab=vssa}
-N 2080 20 2120 20 {lab=vssa}
-N 2020 20 2040 20 {lab=vssa}
-N 2080 50 2080 80 {lab=vssa}
-N 2020 80 2080 80 {lab=vssa}
-N 2020 20 2020 80 {lab=vssa}
-N 2080 80 2120 80 {lab=vssa}
-N 2120 20 2120 80 {lab=vssa}
-N 2120 -40 2120 20 {lab=vssa}
-N 2080 -40 2120 -40 {lab=vssa}
 N 1690 -200 1690 -170 {lab=vpdio}
 N 1650 -140 1690 -140 {lab=vdda_hv}
 N 1730 -140 1770 -140 {lab=vdda_hv}
@@ -451,17 +412,8 @@ N 1320 -60 1440 -60 {lab=vncasc_ab}
 N 1000 40 1040 40 {lab=vdda_hv}
 N -1440 440 -1440 460 {lab=vnbias_in}
 N -1440 490 -1400 490 {lab=vssa}
-N 1440 40 1440 60 {lab=vncasc_ab}
-N 1380 90 1400 90 {lab=pd}
-N 1440 90 1480 90 {lab=vssa}
-N 1160 20 1160 40 {lab=vpcasc_ab}
-N 1160 -10 1200 -10 {lab=vdda_hv}
-N 1100 -10 1120 -10 {lab=pdb}
 N -1520 440 -1440 440 {lab=vnbias_in}
 N -1440 520 -1440 540 {lab=vssa}
-N 1440 120 1440 160 {lab=vssa}
-N 1160 -60 1160 -40 {lab=vdda_hv}
-N 1160 -60 1220 -60 {lab=vdda_hv}
 N -1400 360 -960 360 {lab=vnbias_in}
 N -1400 200 -1400 360 {lab=vnbias_in}
 N -960 360 -960 440 {lab=vnbias_in}
@@ -474,10 +426,87 @@ N -1080 280 -790 280 {lab=vncasc_in}
 N -1560 -30 -1560 40 {lab=vncasc_in}
 N -270 40 -210 40 {lab=vncasc_ab}
 N 1320 -100 1320 -60 {lab=vncasc_ab}
-N 1320 70 1320 120 {lab=vnbias_ab}
-N 1040 -40 1040 10 {lab=vpbias_ab}
+N 1320 100 1320 120 {lab=vnbias_ab}
+N 1040 -20 1040 10 {lab=vpbias_ab}
+N 2590 370 2630 370 {lab=vssa}
+N 2590 370 2590 430 {lab=vssa}
+N 2590 430 2630 430 {lab=vssa}
+N 2630 400 2630 430 {lab=vssa}
+N 2630 430 2670 430 {lab=vssa}
+N 2670 370 2670 430 {lab=vssa}
+N 2630 290 2630 340 {lab=vpcasc_ab}
+N 2750 370 2790 370 {lab=vssa}
+N 2750 370 2750 430 {lab=vssa}
+N 2750 430 2790 430 {lab=vssa}
+N 2790 400 2790 430 {lab=vssa}
+N 2790 430 2830 430 {lab=vssa}
+N 2830 370 2830 430 {lab=vssa}
+N 2790 290 2790 340 {lab=vnbias_in}
+N 2590 180 2630 180 {lab=vssa}
+N 2590 180 2590 240 {lab=vssa}
+N 2590 240 2630 240 {lab=vssa}
+N 2630 210 2630 240 {lab=vssa}
+N 2630 240 2670 240 {lab=vssa}
+N 2670 180 2670 240 {lab=vssa}
+N 2630 100 2630 150 {lab=vpcasc_ab}
+N 2750 180 2790 180 {lab=vssa}
+N 2750 180 2750 240 {lab=vssa}
+N 2750 240 2790 240 {lab=vssa}
+N 2790 210 2790 240 {lab=vssa}
+N 2790 240 2830 240 {lab=vssa}
+N 2830 180 2830 240 {lab=vssa}
+N 2790 100 2790 150 {lab=vnbias_in}
+N 1980 20 2020 20 {lab=vssa}
+N 1920 20 1940 20 {lab=vssa}
+N 1980 50 1980 80 {lab=vssa}
+N 1920 80 1980 80 {lab=vssa}
+N 1920 20 1920 80 {lab=vssa}
+N 1980 80 2020 80 {lab=vssa}
+N 2020 20 2020 80 {lab=vssa}
+N 1960 -200 1960 -170 {lab=vpcasc_ab}
+N 1920 -140 1960 -140 {lab=vdda_hv}
+N 2000 -140 2020 -140 {lab=vdda_hv}
+N 2020 -140 2020 -90 {lab=vdda_hv}
+N 1960 -90 2020 -90 {lab=vdda_hv}
+N 1960 -110 1960 -90 {lab=vdda_hv}
+N 1920 -90 1960 -90 {lab=vdda_hv}
+N 1920 -140 1920 -90 {lab=vdda_hv}
+N 1980 -40 1980 -10 {lab=vncasc_ab}
+N 1440 40 1440 60 {lab=vncasc_ab}
+N 1380 90 1400 90 {lab=pd}
+N 1440 90 1480 90 {lab=vssa}
+N 1440 120 1440 160 {lab=vssa}
+N 1160 20 1160 40 {lab=vpcasc_ab}
+N 1160 -10 1200 -10 {lab=vdda_hv}
+N 1100 -10 1120 -10 {lab=pdb}
+N 1160 -60 1160 -40 {lab=vdda_hv}
+N 1160 -60 1220 -60 {lab=vdda_hv}
+N 640 230 660 230 {lab=pd}
+N 700 230 740 230 {lab=vssa}
+N 700 160 700 200 {lab=vngate_drv}
+N 430 160 700 160 {lab=vngate_drv}
+N 700 260 700 300 {lab=vssa}
+N 1160 230 1180 230 {lab=pd}
+N 1220 230 1260 230 {lab=vssa}
+N 1220 260 1220 300 {lab=vssa}
+N 1220 100 1320 100 {lab=vnbias_ab}
+N 1320 70 1320 100 {lab=vnbias_ab}
+N 1220 100 1220 200 {lab=vnbias_ab}
+N 700 -80 700 -40 {lab=vpgate_drv}
+N -490 -220 430 -220 {lab=vd_pbias_rhs}
+N 430 -40 700 -40 {lab=vpgate_drv}
+N 700 -110 740 -110 {lab=vdda_hv}
+N 640 -110 660 -110 {lab=pdb}
+N 700 -180 700 -140 {lab=vdda_hv}
+N 920 -110 960 -110 {lab=vdda_hv}
+N 860 -110 880 -110 {lab=pdb}
+N 920 -160 920 -140 {lab=vdda_hv}
+N 920 -160 980 -160 {lab=vdda_hv}
+N 920 -20 1040 -20 {lab=vpbias_ab}
+N 1040 -40 1040 -20 {lab=vpbias_ab}
+N 920 -80 920 -20 {lab=vpbias_ab}
 N -1500 490 -1480 490 {lab=pd}
-N -970 150 -950 150 {lab=pd}
+N -980 150 -950 150 {lab=pd}
 C {lab_wire.sym} 470 440 0 0 {name=p3 sig_type=std_logic lab=vssa}
 C {lab_wire.sym} 470 280 0 0 {name=p6 sig_type=std_logic lab=vssa}
 C {sg13g2_pr/sg13_hv_nmos.sym} 410 440 0 0 {name=Mactive_nbias_rhs
@@ -724,7 +753,7 @@ C {sg13g2_pr/sg13_hv_nmos.sym} 2130 380 1 0 {name=Mactive_nbias_rhs4
 l=8.28u
 w=6u
 ng=1
-m=16
+m=12
 model=sg13_hv_nmos
 spiceprefix=X
 }
@@ -865,42 +894,6 @@ model=sg13_hv_pmos
 spiceprefix=X
 }
 C {lab_wire.sym} 2320 -420 1 0 {name=p68 sig_type=std_logic lab=vdda_hv}
-C {sg13g2_pr/sg13_hv_nmos.sym} 1890 20 0 0 {name=M_nab_lhs2
-l=2u
-w=3u
-ng=1
-m=1
-model=sg13_hv_nmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1950 20 0 0 {name=p69 sig_type=std_logic lab=vssa}
-C {sg13g2_pr/sg13_hv_pmos.sym} 1910 -140 0 1 {name=M_pab_lhs3
-l=2u
-w=8.64u
-ng=1
-m=1
-model=sg13_hv_pmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1850 -140 0 1 {name=p70 sig_type=std_logic lab=vdda_hv}
-C {sg13g2_pr/sg13_hv_pmos.sym} 2040 -140 0 1 {name=M_pab_lhs4
-l=2u
-w=8.64u
-ng=1
-m=1
-model=sg13_hv_pmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1980 -140 0 1 {name=p71 sig_type=std_logic lab=vdda_hv}
-C {sg13g2_pr/sg13_hv_nmos.sym} 2060 20 0 0 {name=M_nab_lhs3
-l=2u
-w=3u
-ng=1
-m=1
-model=sg13_hv_nmos
-spiceprefix=X
-}
-C {lab_wire.sym} 2120 20 0 0 {name=p72 sig_type=std_logic lab=vssa}
 C {sg13g2_pr/sg13_hv_pmos.sym} 1710 -140 0 1 {name=M_pab_lhs1
 l=2u
 w=8.64u
@@ -1010,33 +1003,11 @@ C {sg13g2_pr/sg13_hv_nmos.sym} -1460 490 0 0 {name=Mnbias_pd1
 l=0.45u
 w=1u
 ng=1
-m=2
+m=4
 model=sg13_hv_nmos
 spiceprefix=X
 }
 C {lab_wire.sym} -1400 490 0 0 {name=p108 sig_type=std_logic lab=vssa}
-C {sg13g2_pr/sg13_hv_nmos.sym} 1420 90 0 0 {name=Mnbias_pd2
-l=0.45u
-w=1u
-ng=1
-m=2
-model=sg13_hv_nmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1480 90 0 0 {name=p110 sig_type=std_logic lab=vssa}
-C {lab_wire.sym} 1400 90 0 0 {name=p111 sig_type=std_logic lab=pd}
-C {sg13g2_pr/sg13_hv_pmos.sym} 1140 -10 0 0 {name=Mpbias_pd2
-l=0.4u
-w=1u
-ng=1
-m=2
-model=sg13_hv_pmos
-spiceprefix=X
-}
-C {lab_wire.sym} 1200 -10 0 0 {name=p112 sig_type=std_logic lab=vdda_hv}
-C {lab_wire.sym} 1120 -10 0 0 {name=p113 sig_type=std_logic lab=pdb}
-C {lab_wire.sym} 1440 160 1 0 {name=p114 sig_type=std_logic lab=vssa}
-C {lab_wire.sym} 1220 -60 0 0 {name=p115 sig_type=std_logic lab=vdda_hv}
 C {ipin.sym} 1320 -100 1 0 {name=p120 lab=vncasc_ab}
 C {ipin.sym} -1560 -30 1 0 {name=p85 lab=vncasc_in}
 C {ipin.sym} -1660 540 0 0 {name=p16 lab=vssa}
@@ -1047,5 +1018,136 @@ C {lab_wire.sym} 220 40 0 0 {name=p30 sig_type=std_logic lab=vpcasc_ab}
 C {lab_wire.sym} 1130 140 0 0 {name=p86 sig_type=std_logic lab=vpcasc_ab}
 C {opin.sym} 1040 -40 3 0 {name=p90 lab=vpbias_ab}
 C {lab_wire.sym} -1260 360 0 0 {name=p89 sig_type=std_logic lab=vnbias_in}
-C {ipin.sym} -1500 490 0 0 {name=p92 lab=pd}
-C {lab_wire.sym} -950 150 0 0 {name=p14 sig_type=std_logic lab=vssa}
+C {lab_wire.sym} 2590 370 0 1 {name=p92 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2650 370 0 1 {name=Mactive_ncasc_rhs6
+l=7.2u
+w=6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2630 330 3 1 {name=p97 sig_type=std_logic lab=vpcasc_ab
+}
+C {lab_wire.sym} 2750 370 0 1 {name=p99 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2810 370 0 1 {name=Mactive_ncasc_rhs7
+l=7.2u
+w=6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2790 330 3 1 {name=p100 sig_type=std_logic lab=vnbias_in
+}
+C {lab_wire.sym} 2590 180 0 1 {name=p101 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2650 180 0 1 {name=Mactive_ncasc_rhs8
+l=40.56u
+w=6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2630 140 3 1 {name=p102 sig_type=std_logic lab=vpcasc_ab
+}
+C {lab_wire.sym} 2750 180 0 1 {name=p104 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_nmos.sym} 2810 180 0 1 {name=Mactive_ncasc_rhs9
+l=52.48u
+w=6u
+ng=1
+m=1
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2790 140 3 1 {name=p107 sig_type=std_logic lab=vnbias_in
+}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1960 20 0 0 {name=M_nab_lhs5
+l=2u
+w=3u
+ng=1
+m=2
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 2020 20 0 0 {name=p116 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1980 -140 0 1 {name=M_pab_lhs5
+l=2u
+w=8.64u
+ng=1
+m=2
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 1920 -140 0 1 {name=p117 sig_type=std_logic lab=vdda_hv}
+C {lab_wire.sym} 1980 -20 0 0 {name=p118 sig_type=std_logic lab=vncasc_ab}
+C {lab_wire.sym} 1960 -180 0 0 {name=p119 sig_type=std_logic lab=vpcasc_ab}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1420 90 0 0 {name=Mnbias_pd2
+l=0.45u
+w=1u
+ng=1
+m=4
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 1480 90 0 0 {name=p110 sig_type=std_logic lab=vssa}
+C {lab_wire.sym} 1400 90 0 0 {name=p111 sig_type=std_logic lab=pd}
+C {lab_wire.sym} 1440 160 1 0 {name=p114 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_pmos.sym} 1140 -10 0 0 {name=Mpbias_pd2
+l=0.4u
+w=1u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 1200 -10 0 0 {name=p112 sig_type=std_logic lab=vdda_hv}
+C {lab_wire.sym} 1120 -10 0 0 {name=p113 sig_type=std_logic lab=pdb}
+C {lab_wire.sym} 1220 -60 0 0 {name=p115 sig_type=std_logic lab=vdda_hv}
+C {sg13g2_pr/sg13_hv_nmos.sym} 680 230 0 0 {name=Mnbias_pd3
+l=0.45u
+w=1u
+ng=1
+m=4
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 740 230 0 0 {name=p69 sig_type=std_logic lab=vssa}
+C {lab_wire.sym} 700 300 1 0 {name=p70 sig_type=std_logic lab=vssa}
+C {lab_wire.sym} 640 230 0 1 {name=p71 sig_type=std_logic lab=pd}
+C {sg13g2_pr/sg13_hv_nmos.sym} 1200 230 0 0 {name=Mnbias_pd4
+l=0.45u
+w=1u
+ng=1
+m=4
+model=sg13_hv_nmos
+spiceprefix=X
+}
+C {lab_wire.sym} 1260 230 0 0 {name=p72 sig_type=std_logic lab=vssa}
+C {lab_wire.sym} 1180 230 0 0 {name=p121 sig_type=std_logic lab=pd}
+C {lab_wire.sym} 1220 300 1 0 {name=p122 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/sg13_hv_pmos.sym} 680 -110 0 0 {name=Mpbias_pd3
+l=0.4u
+w=1u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 740 -110 0 0 {name=p125 sig_type=std_logic lab=vdda_hv}
+C {lab_wire.sym} 640 -110 0 1 {name=p126 sig_type=std_logic lab=pdb}
+C {lab_wire.sym} 700 -140 1 0 {name=p127 sig_type=std_logic lab=vdda_hv}
+C {sg13g2_pr/sg13_hv_pmos.sym} 900 -110 0 0 {name=Mpbias_pd4
+l=0.4u
+w=1u
+ng=1
+m=4
+model=sg13_hv_pmos
+spiceprefix=X
+}
+C {lab_wire.sym} 960 -110 0 0 {name=p128 sig_type=std_logic lab=vdda_hv}
+C {lab_wire.sym} 880 -110 0 0 {name=p129 sig_type=std_logic lab=pdb}
+C {lab_wire.sym} 980 -160 0 0 {name=p130 sig_type=std_logic lab=vdda_hv}
+C {ipin.sym} -1500 490 0 0 {name=p123 lab=pd}
+C {lab_wire.sym} -950 150 0 0 {name=p14 sig_type=std_logic lab=vssa
+}
