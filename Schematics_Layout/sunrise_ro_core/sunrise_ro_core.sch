@@ -5,14 +5,14 @@ V {}
 S {}
 F {}
 E {}
-L 3 -460 -240 380 -240 {}
-L 3 380 -240 380 -140 {}
-L 3 -460 -140 380 -140 {}
-L 3 -460 -240 -460 -140 {}
+L 3 -320 -240 520 -240 {}
+L 3 520 -240 520 -140 {}
+L 3 -320 -140 520 -140 {}
+L 3 -320 -240 -320 -140 {}
 T {R = 1672} 1070 0 0 0 0.4 0.4 {}
 T {fanout = 4} -940 0 0 0 0.4 0.4 {}
 T {fanout = 2} -810 0 0 0 0.4 0.4 {}
-T {Filler cells} -110 -230 0 0 0.4 0.4 {}
+T {Filler cells} 30 -230 0 0 0.4 0.4 {}
 N -850 -180 -810 -180 {lab=vdda_lv}
 N -940 60 -450 60 {lab=vssa}
 N -1100 -20 -1030 -20 {lab=ro_out}
@@ -280,7 +280,7 @@ C {devices/lab_wire.sym} -760 -40 0 1 {name=p13 sig_type=std_logic lab=n1
 C {devices/lab_wire.sym} -890 -40 0 1 {name=p11 sig_type=std_logic lab=n0
 
 }
-C {sg13cmos5l_stdcells/sg13cmos5l_fill_8.sym} -370 -180 0 0 {name=x7[7:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
-C {sg13cmos5l_stdcells/sg13cmos5l_fill_4.sym} -160 -180 0 0 {name=x8[3:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
-C {sg13cmos5l_stdcells/sg13cmos5l_fill_2.sym} 50 -180 0 0 {name=x9[3:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
-C {sg13cmos5l_stdcells/sg13cmos5l_fill_1.sym} 250 -180 0 0 {name=x10[1:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
+C {sg13cmos5l_stdcells/sg13cmos5l_fill_8.sym} -230 -180 0 0 {name=x7[7:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
+C {sg13cmos5l_stdcells/sg13cmos5l_fill_4.sym} -20 -180 0 0 {name=x8[3:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
+C {sg13cmos5l_stdcells/sg13cmos5l_fill_2.sym} 190 -180 0 0 {name=x9[3:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
+C {sg13cmos5l_stdcells/sg13cmos5l_fill_1.sym} 390 -180 0 0 {name=x10[1:0] VDD=vdda_lv VSS=vssa prefix=sg13cmos5l_ }
