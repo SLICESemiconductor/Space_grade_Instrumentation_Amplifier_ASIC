@@ -28,4 +28,18 @@ C {ipin.sym} -240 320 0 0 {name=p22 lab=vinn}
 C {opin.sym} 80 300 0 0 {name=p23 lab=vout}
 C {ipin.sym} -240 200 0 0 {name=p24 lab=vdda_hv}
 C {ipin.sym} -240 420 0 0 {name=p25 lab=vssa}
-C {sunrise/sunrise_opamp_cmfb_prb_ndppd.sym} 280 360 0 0 {name=xiopampx}
+C {sunrise/sunrise_opamp_cmfb_prb_ndppd.sym} -100 400 0 0 {name=xiopamp
+
+xSCH:
+schematic=sunrise_opamp_cmfb_prb_ndppd.sch
+
+xRCX:
+xschematic=sunrise_opamp_cmfb_prb_ndppd_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb_ndppd/PEX/sunrise_opamp_cmfb_prb_ndppd_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb_ndppd/PEX/sunrise_opamp_cmfb_prb_ndppd_flat_rcx.spice)"
+
+xCX:
+xschematic=sunrise_opamp_cmfb_prb_ndppd_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb_ndppd/PEX/sunrise_opamp_cmfb_prb_ndppd_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb_ndppd/PEX/sunrise_opamp_cmfb_prb_ndppd_flat_cx.spice)"
+}
