@@ -20,7 +20,21 @@ N 80 320 80 340 {lab=#net1}
 N 40 340 80 340 {lab=#net1}
 C {sunrise/title_slice.sym} -560 580 0 0 {name=l1 author="Diarmuid Collins"
 company="SLICE Semiconductor"}
-C {sunrise/sunrise_opamp_cmfb_prb.sym} -100 400 0 0 {name=xiopamp}
+C {sunrise/sunrise_opamp_cmfb_prb.sym} -100 400 0 0 {name=xiopamp
+
+xSCH:
+schematic=sunrise_opamp_cmfb_prb.sch
+
+xRCX:
+xschematic=sunrise_opamp_cmfb_prb_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb/PEX/sunrise_opamp_cmfb_prb_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb/PEX/sunrise_opamp_cmfb_prb_flat_rcx.spice)"
+
+xCX:
+xschematic=sunrise_opamp_cmfb_prb_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb/PEX/sunrise_opamp_cmfb_prb_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_opamp_cmfb_prb/PEX/sunrise_opamp_cmfb_prb_flat_cx.spice)"
+}
 C {ipin.sym} -240 340 0 0 {name=p18 lab=pd}
 C {ipin.sym} -240 360 0 0 {name=p19 lab=pdb}
 C {ipin.sym} -240 260 0 0 {name=p20 lab=vnbias_in_5u}
