@@ -1,0 +1,30 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spectre_format="@name ( @pinlist ) @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 100 -40 100 -20 {}
+L 4 40 -40 40 -20 {}
+L 4 120 20 140 20 {}
+L 4 0 20 20 20 {}
+L 4 20 -20 40 -20 {}
+L 4 20 -20 20 40 {}
+L 4 20 40 120 40 {}
+L 4 120 -20 120 40 {}
+L 4 40 -20 120 -20 {}
+B 5 97.5 -42.5 102.5 -37.5 {name=isrc2 dir=in}
+B 5 37.5 -42.5 42.5 -37.5 {name=isrc1 dir=in}
+B 5 137.5 17.5 142.5 22.5 {name=vdda_hv dir=in}
+B 5 -2.5 17.5 2.5 22.5 {name=vssa dir=in}
+T {@symname} 25.5 -36 0 0 0.3 0.3 {}
+T {@name} 25 -2 0 0 0.2 0.2 {}
+T {isrc2} 115 -6 2 0 0.2 0.2 {}
+T {isrc1} 55 -6 2 0 0.2 0.2 {}
+T {vdda_hv} 115 24 2 0 0.2 0.2 {}
+T {vssa} 25 16 0 0 0.2 0.2 {}
