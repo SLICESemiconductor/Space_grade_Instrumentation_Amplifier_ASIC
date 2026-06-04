@@ -5,8 +5,7 @@ V {}
 S {}
 F {}
 E {}
-N 40 -240 60 -240 {lab=vout}
-N 60 -240 60 -180 {lab=vout}
+N 60 -240 120 -240 {lab=vout}
 N 40 -180 60 -180 {lab=vout}
 N -460 -300 -380 -300 {lab=vih}
 N -460 -180 -380 -180 {lab=vil}
@@ -18,7 +17,8 @@ N -140 -400 -140 -380 {lab=vdda_hv}
 N -460 -80 -140 -80 {lab=vssa}
 N -140 -100 -140 -80 {lab=vssa}
 N 40 -300 120 -300 {lab=vref}
-N 60 -240 120 -240 {lab=vout}
+N 60 -240 60 -180 {lab=vout}
+N 40 -240 60 -240 {lab=vout}
 C {ipin.sym} -460 -300 0 0 {name=p13 lab=vih}
 C {ipin.sym} -460 -180 0 0 {name=p12 lab=vil}
 C {ipin.sym} -460 -260 0 0 {name=p18 lab=pd_hv}
