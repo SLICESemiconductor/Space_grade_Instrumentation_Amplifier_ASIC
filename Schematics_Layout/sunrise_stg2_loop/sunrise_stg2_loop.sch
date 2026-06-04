@@ -5,18 +5,13 @@ V {}
 S {}
 F {}
 E {}
-L 2 480 -140 500 -60 {}
-L 2 470 -120 480 -140 {}
-L 2 480 -140 500 -120 {}
 L 2 -10 130 70 130 {}
 L 2 110 130 150 130 {}
 L 2 110 130 120 120 {}
 L 2 110 130 120 140 {}
-T {Must contain route to the ESD} 350 -50 0 0 0.4 0.4 {}
 T {Shorted at next level} 170 120 0 0 0.4 0.4 {}
 N 140 -280 140 -240 {lab=vdda_hv}
 N -200 -420 -100 -420 {lab=vip_stg2}
-N 40 -420 200 -420 {lab=vref}
 N -360 -480 -360 -440 {
 lab=vssa}
 N -40 -480 -40 -440 {
@@ -25,15 +20,13 @@ N -200 -420 -200 -160 {lab=vip_stg2}
 N -280 -420 -200 -420 {lab=vip_stg2}
 N -200 -160 60 -160 {lab=vip_stg2}
 N -280 80 -200 80 {lab=vin_stg2}
-N 80 80 340 80 {lab=vout}
 N -60 80 -20 80 {lab=stbprb_in}
 N -140 20 -140 60 {
 lab=vssa}
 N -360 20 -360 60 {
 lab=vssa}
 N -200 -140 -200 80 {lab=vin_stg2}
-N 340 -160 340 80 {lab=vout}
-N 300 -160 340 -160 {lab=vout}
+N 420 -160 420 80 {lab=vout}
 N 140 -60 140 -20 {
 lab=vssa}
 N -500 80 -420 80 {lab=vil}
@@ -44,9 +37,21 @@ N -20 -120 60 -120 {lab=pd_hv}
 N -20 -100 60 -100 {lab=pdb_hv}
 N -20 -280 140 -280 {lab=vdda_hv}
 N -20 -20 140 -20 {lab=vssa}
-N 340 -160 480 -160 {lab=vout}
+N 420 -160 480 -160 {lab=vout}
 N 80 80 80 120 {lab=vout}
 N -20 80 -20 120 {lab=stbprb_in}
+N 40 -420 200 -420 {lab=vref}
+N 80 80 420 80 {lab=vout}
+N 300 -160 420 -160 {lab=vout}
+N 480 -400 480 -380 {lab=vssa}
+N 480 -400 620 -400 {lab=vssa}
+N 620 -400 620 -380 {lab=vssa}
+N 480 -320 480 -300 {lab=vssa}
+N 480 -300 620 -300 {lab=vssa}
+N 620 -320 620 -300 {lab=vssa}
+N 440 -400 480 -400 {lab=vssa}
+N 440 -400 440 -300 {lab=vssa}
+N 440 -300 480 -300 {lab=vssa}
 C {devices/lab_wire.sym} -360 -450 1 0 {name=p16 sig_type=std_logic lab=vssa
 
 }
@@ -155,3 +160,22 @@ C {ipin.sym} 200 -420 2 0 {name=p1 lab=vref}
 C {ipin.sym} -20 120 3 0 {name=p3 lab=stbprb_in}
 C {sunrise/title_slice.sym} -420 320 0 0 {name=l1 author="Diarmuid Collins"
 company="SLICE Semiconductor"}
+C {sg13g2_pr/rppd.sym} 480 -350 0 0 {name=R2
+w=2e-6
+l=221e-6
+model=rppd
+body=vssa
+spiceprefix=X
+b=0
+m=4
+}
+C {lab_wire.sym} 590 -300 0 0 {name=p2 sig_type=std_logic lab=vssa}
+C {sg13g2_pr/rppd.sym} 620 -350 0 0 {name=R1
+w=23.99e-6
+l=2e-6
+model=rppd
+body=vssa
+spiceprefix=X
+b=0
+m=2
+}
