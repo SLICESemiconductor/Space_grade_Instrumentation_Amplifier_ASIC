@@ -29,6 +29,12 @@ N -680 -480 -440 -480 {lab=ibias_in_5u}
 N -520 -300 -360 -300 {lab=vssa}
 N -360 -340 -360 -300 {lab=vssa}
 N -640 -140 -100 -140 {lab=stbprb_in}
+N 240 -320 280 -320 {
+lab=vssa}
+N 240 -320 240 -260 {lab=vssa}
+N 240 -260 300 -260 {lab=vssa}
+N 240 -400 240 -320 {lab=vssa}
+N 240 -400 300 -400 {lab=vssa}
 C {devices/lab_wire.sym} -10 -320 0 0 {name=p63 sig_type=std_logic lab=vssa
 
 }
@@ -75,3 +81,21 @@ company="SLICE Semiconductor"}
 C {ipin.sym} -100 -140 3 0 {name=p1 lab=stbprb_in
 }
 C {opin.sym} 20 -140 1 0 {name=p2 lab=stbprb_out}
+C {devices/lab_wire.sym} 270 -320 0 0 {name=p3 sig_type=std_logic lab=vssa
+
+}
+C {sunrise/sunrise_res_100k.sym} 200 -300 0 0 {name=x1
+
+xSCH:
+schematic=sunrise_res_100k.sch
+
+xRCX:
+xschematic=sunrise_res_100k_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_res_100k/PEX/sunrise_res_100k_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_res_100k/PEX/sunrise_res_100k_flat_rcx.spice)"
+
+xCX:
+xschematic=sunrise_res_100k_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_res_100k/PEX/sunrise_res_100k_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_opamp/LAYOUT/sunrise_res_100k/PEX/sunrise_res_100k_flat_cx.spice)"
+}
