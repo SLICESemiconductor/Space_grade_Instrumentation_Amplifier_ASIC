@@ -1,0 +1,25 @@
+# Python packages dependencies
+
+# COCOTB
+cocotb == 2.0.1
+
+# Python framework for tests
+pytest==9.0.3
+
+# PyUVM - UVM in python
+pyuvm == 2.9.1
+
+# Coverage
+pyvsc == 0.8.8.*
+
+# Coverage for COCOTB
+cocotb-coverage == 1.1.0
+
+# Randomziation
+constrainedrandom == 1.1.2
+
+# Visualise coverage
+pyucis-viewer==0.0.4.*
+
+# cocotbext-i2c
+cocotbext-i2c==0.1.2

@@ -1,0 +1,43 @@
+{
+  "//": "DESIGN_NAME - Top verilog source.",
+  "DESIGN_NAME": "sunrise_digital_top",
+
+  "//": "VERILOG_FILES - List containing all design source files.",
+  "VERILOG_FILES": ["dir::../rtl/sunrise_digital_top.v", "dir::../rtl/top_wrapper.sv", "dir::../rtl/reclocking.sv", "dir::../rtl/synchronizer.sv", "dir::../rtl/mux.sv", "dir::../rtl/reg_bank.sv", "dir::../rtl/spi_peripheral.sv", "dir::../rtl/falling_edge_detector.sv", "dir::../rtl/rising_edge_detector.sv", "dir::../rtl/i2c_peripheral.sv"],
+
+  "//": "CLOCK_PORT - Clock port name.",
+  "CLOCK_PORT": "clk",
+
+  "//": "CLOCK_PERIOD - Increase this in case you are getting setup time violations.",
+  "//": "The value is in nanoseconds, so 20ns == 50MHz.",
+  "CLOCK_PERIOD": 20,
+
+  "//": "FP_PIN_ORDER_CFG - Configuration for physical placement of ports.",
+  "FP_PIN_ORDER_CFG": "dir::./pin_order.cfg",
+
+  "//": "Absolute die size",
+  "FP_SIZING": "absolute",
+  "//": "Die area, 3rd argument is horizontal width, fourth argument is vertical width",
+  "DIE_AREA": [0, 0, 150, 150],
+
+  "//": "Limit Max routing layer to M3",
+  "RT_MAX_LAYER": "Metal3",
+
+  "//": "Reduced pitch for power network distribution",
+  "FP_PDN_HPITCH": 20.0,
+  "FP_PDN_VPITCH": 20.0,
+
+  "//": "Reduce wasted space in top and bottom",
+  "//": "The core margin, in multiples of site heights, from the top and bottom boundary",
+  "TOP_MARGIN_MULT": 1,
+  "BOTTOM_MARGIN_MULT": 1,
+
+  "//": "The core margin, in multiples of site widths, from the left and ringht boundary",
+  "LEFT_MARGIN_MULT": 3,
+  "RIGHT_MARGIN_MULT": 3,
+
+  "//": "The length of the pins with an east or west orientation in micrometers.",
+  "FP_IO_HLENGTH": 2,
+  "//": "The length of the pins with a north or south orientation in micrometers.",
+  "FP_IO_VLENGTH": 2
+}
