@@ -21,25 +21,6 @@ N -20 140 20 140 {lab=vssa}
 N 200 60 240 60 {lab=vssa}
 N 200 60 200 140 {lab=vssa}
 N 100 140 200 140 {lab=vssa}
-N 540 -140 540 -120 {lab=#net1}
-N 480 -140 540 -140 {lab=#net1}
-N 480 -140 480 -90 {lab=#net1}
-N 480 -90 500 -90 {lab=#net1}
-N 540 -140 640 -140 {lab=#net1}
-N 640 -140 640 -120 {lab=#net1}
-N 640 -140 740 -140 {lab=#net1}
-N 740 -140 740 -120 {lab=#net1}
-N 540 -60 540 -40 {lab=#net1}
-N 480 -40 540 -40 {lab=#net1}
-N 480 -90 480 -40 {lab=#net1}
-N 600 -40 640 -40 {lab=#net1}
-N 640 -60 640 -40 {lab=#net1}
-N 700 -40 740 -40 {lab=#net1}
-N 740 -60 740 -40 {lab=#net1}
-N 700 -90 700 -40 {lab=#net1}
-N 640 -40 700 -40 {lab=#net1}
-N 600 -90 600 -40 {lab=#net1}
-N 540 -40 600 -40 {lab=#net1}
 C {ipin.sym} 100 -150 1 0 {name=p1 lab=isrc1}
 C {ipin.sym} 280 -150 1 0 {name=p2 lab=isrc2}
 C {ipin.sym} -20 140 0 0 {name=p3 lab=vssa}
@@ -58,25 +39,3 @@ w=7.5e-6
 l=7.5e-6
 m=50
 }
-C {sg13cmos5l_pr/pnpMPA.sym} 520 -90 0 0 {name=Q3
-model=pnpMPA
-spiceprefix=X
-w=7.5e-6
-l=2e-6
-m=20
-}
-C {sg13cmos5l_pr/pnpMPA.sym} 620 -90 0 0 {name=Q4
-model=pnpMPA
-spiceprefix=X
-w=2e-6
-l=7.5e-6
-m=30
-}
-C {sg13cmos5l_pr/pnpMPA.sym} 720 -90 0 0 {name=Q5
-model=pnpMPA
-spiceprefix=X
-w=2e-6
-l=2e-6
-m=6
-}
-C {lab_wire.sym} 590 -40 0 0 {name=p4 sig_type=std_logic lab=vssa}

@@ -17,6 +17,7 @@ T {fmax = 13.62MHz
 fmin = 9.13MHz
 fmid = 10.5MHz
 spread = +/- 20%} 640 -240 0 0 0.4 0.4 {}
+T {default = 011111} -340 -120 0 0 0.4 0.4 {}
 N 860 -40 920 -40 {lab=#net1}
 N -180 -180 60 -180 {lab=vdda_lv}
 N 60 -180 60 -160 {lab=vdda_lv}

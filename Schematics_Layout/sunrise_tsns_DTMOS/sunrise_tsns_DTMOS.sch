@@ -94,7 +94,8 @@ spiceprefix=X
 C {ipin.sym} 100 -150 1 0 {name=p1 lab=isrc1}
 C {ipin.sym} 280 -150 1 0 {name=p2 lab=isrc2}
 C {ipin.sym} -20 140 0 0 {name=p3 lab=vssa}
-C {sunrise/title_slice.sym} -350 280 0 0 {name=l1 author="Stefan Schippers"}
+C {sunrise/title_slice.sym} -350 280 0 0 {name=l1 author="Diarmuid Collins"
+company="SLICE Semiconductor"}
 C {sg13cmos5l_pr/sg13_hv_pmos.sym} 550 -180 3 1 {name=M3
 l=2u
 w=2u

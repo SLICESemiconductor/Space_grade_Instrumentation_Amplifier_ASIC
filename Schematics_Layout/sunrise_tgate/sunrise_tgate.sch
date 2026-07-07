@@ -13,14 +13,14 @@ Process/temp spread ~ +/-38%} -390 -100 0 0 0.4 0.4 {}
 N 220 -140 220 -100 {
 lab=vssa}
 N 220 -20 220 20 {
-lab=vdda}
+lab=vdda_hv}
 N 250 -140 320 -140 {lab=tgate_out}
 N 250 20 320 20 {lab=tgate_out}
 N 120 -140 190 -140 {lab=tgate_in}
 N 120 20 190 20 {lab=tgate_in}
 N 120 -60 120 20 {lab=tgate_in}
 N 320 -60 320 20 {lab=tgate_out}
-N 60 -260 100 -260 {lab=vdda}
+N 60 -260 100 -260 {lab=vdda_hv}
 N 60 -220 100 -220 {lab=vssa}
 N 80 -60 120 -60 {lab=tgate_in}
 N 120 -140 120 -60 {lab=tgate_in}
@@ -30,27 +30,27 @@ N 220 -200 220 -180 {lab=en_hv}
 N 220 60 220 80 {lab=enb_hv}
 C {sg13g2_pr/sg13_hv_nmos.sym} 220 -160 3 1 {name=M1
 l=0.45u
-w=2.8u
+w=2.12u
 ng=1
-m=6
+m=8
 model=sg13_hv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_hv_pmos.sym} 220 40 3 0 {name=M2
-l=0.4u
-w=9.5u
+l=0.45u
+w=8.13u
 ng=1
-m=6
+m=8
 model=sg13_hv_pmos
 spiceprefix=X
 }
 C {devices/lab_wire.sym} 220 -130 1 1 {name=p2 sig_type=std_logic lab=vssa
 
 }
-C {devices/lab_wire.sym} 220 10 3 1 {name=p3 sig_type=std_logic lab=vdda
+C {devices/lab_wire.sym} 220 10 3 1 {name=p3 sig_type=std_logic lab=vdda_hv
 
 }
-C {ipin.sym} 60 -260 0 0 {name=p1 lab=vdda}
+C {ipin.sym} 60 -260 0 0 {name=p1 lab=vdda_hv}
 C {ipin.sym} 60 -220 0 0 {name=p6 lab=vssa}
 C {iopin.sym} 80 -60 2 0 {name=p7 lab=tgate_in}
 C {iopin.sym} 360 -60 0 0 {name=p8 lab=tgate_out}

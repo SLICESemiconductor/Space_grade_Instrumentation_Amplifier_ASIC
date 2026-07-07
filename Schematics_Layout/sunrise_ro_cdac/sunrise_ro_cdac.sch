@@ -148,8 +148,8 @@ C {iopin.sym} 420 -280 3 0 {name=p9 lab=ctop}
 C {sunrise/sunrise_ro_cdac_cap_array.sym} 240 -300 0 0 {name=xcap_array
 
 xSCH:
-schematic=sunrise_ro_cdac_cap_array.sch
-xschematic=sunrise_ro_cdac_cap_array_ideal.sch
+xschematic=sunrise_ro_cdac_cap_array.sch
+schematic=sunrise_ro_cdac_cap_array_ideal.sch
 
 xRC:
 xschematic=sunrise_ro_cdac_cap_array_flat
