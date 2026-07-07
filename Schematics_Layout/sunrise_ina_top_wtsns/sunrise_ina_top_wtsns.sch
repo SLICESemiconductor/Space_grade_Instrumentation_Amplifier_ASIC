@@ -72,12 +72,12 @@ N -640 -240 -640 -100 {lab=vtsns1_n}
 C {sunrise/sunrise_INA_top.sym} 100 140 0 0 {name=xina_top
 
 xSCH:
-xschematic=sunrise_INA_top.sch
+schematic=sunrise_INA_top.sch
 
 xRCX:
-schematic=sunrise_INA_top_flat
-spice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_INA_top/PEX/sunrise_INA_top_flat_rcx.spice)"
-tclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_INA_top/PEX/sunrise_INA_top_flat_rcx.spice)"
+xschematic=sunrise_INA_top_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_INA_top/PEX/sunrise_INA_top_flat_rcx_v2.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_INA_top/PEX/sunrise_INA_top_flat_rcx_v2.spice)"
 
 xCX:
 xschematic=sunrise_INA_top_flat
@@ -87,12 +87,12 @@ xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunr
 C {sunrise/sunrise_tsns_PMOS.sym} -740 20 0 0 {name=xtsns_PMOS
 
 xSCH:
-xschematic=sunrise_tsns_PMOS.sch
+schematic=sunrise_tsns_PMOS.sch
 
 xRCX:
-schematic=sunrise_tsns_PMOS_flat
-spice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_PMOS/PEX/sunrise_tsns_PMOS_flat_rcx.spice)"
-tclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_PMOS/PEX/sunrise_tsns_PMOS_flat_rcx.spice)"
+xschematic=sunrise_tsns_PMOS_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_PMOS/PEX/sunrise_tsns_PMOS_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_PMOS/PEX/sunrise_tsns_PMOS_flat_rcx.spice)"
 
 xCX:
 xschematic=sunrise_tsns_PMOS_flat
@@ -102,12 +102,12 @@ xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/
 C {sunrise/sunrise_tsns_DTMOS.sym} -1080 20 0 0 {name=xtsns_DTMOS
 
 xSCH:
-xschematic=sunrise_tsns_DTMOS.sch
+schematic=sunrise_tsns_DTMOS.sch
 
 xRCX:
-schematic=sunrise_tsns_DTMOS_flat
-spice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_DTMOS/PEX/sunrise_tsns_DTMOS_flat_rcx.spice)"
-tclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_DTMOS/PEX/sunrise_tsns_DTMOS_flat_rcx.spice)"
+xschematic=sunrise_tsns_DTMOS_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_DTMOS/PEX/sunrise_tsns_DTMOS_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_temp_sense/LAYOUT/sunrise_tsns_DTMOS/PEX/sunrise_tsns_DTMOS_flat_rcx.spice)"
 
 xCX:
 xschematic=sunrise_tsns_DTMOS_flat

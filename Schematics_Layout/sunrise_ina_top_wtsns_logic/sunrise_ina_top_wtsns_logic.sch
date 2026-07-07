@@ -53,12 +53,12 @@ N 220 -140 260 -140 {lab=vout}
 C {sunrise/sunrise_ina_top_wtsns.sym} -620 -200 0 0 {name=xina_top_wtsns
 
 xSCH:
-xschematic=sunrise_ina_top_wtsns.sch
+schematic=sunrise_ina_top_wtsns.sch
 
 xRCX:
-schematic=sunrise_ina_top_wtsns_flat
-spice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina_top_wtsns/PEX/sunrise_ina_top_wtsns_flat_rcx_v2.spice)"
-tclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina_top_wtsns/PEX/sunrise_ina_top_wtsns_flat_rcx_v2.spice)"
+xschematic=sunrise_ina_top_wtsns_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina_top_wtsns/PEX/sunrise_ina_top_wtsns_flat_rcx_v2.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina_top_wtsns/PEX/sunrise_ina_top_wtsns_flat_rcx_v2.spice)"
 
 xCX:
 xschematic=sunrise_ina_top_wtsns_flat

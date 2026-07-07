@@ -26,7 +26,7 @@ N -40 200 -20 200 {lab=#net1}
 N -880 440 -180 440 {lab=vssa}
 N -180 400 -180 440 {lab=vssa}
 N -180 -320 -180 160 {lab=vdda_hv}
-N -360 280 -300 280 {lab=pd}
+N -360 280 -300 280 {lab=pd_hv}
 N -360 300 -300 300 {lab=pdb}
 N -480 -80 -440 -80 {lab=ext_bias_int_hv}
 N -480 -60 -440 -60 {lab=ext_bias_intb_hv}
@@ -66,15 +66,25 @@ C {opin.sym} 20 240 0 0 {name=p25 lab=ibias_5uA_stg1_nia}
 C {opin.sym} 20 260 0 0 {name=p26 lab=ibias_5uA_stg1_ia}
 C {opin.sym} 20 280 0 0 {name=p27 lab=ibias_5uA_stg2}
 C {noconn.sym} -20 200 2 0 {name=l2}
-C {ipin.sym} -360 300 0 0 {name=p28 lab=pdb
+C {ipin.sym} -360 300 0 0 {name=p28 lab=pdb_hv
 }
-C {ipin.sym} -360 280 0 0 {name=p29 lab=pd
+C {ipin.sym} -360 280 0 0 {name=p29 lab=pd_hv
 }
 C {lab_wire.sym} -340 240 0 0 {name=p1 sig_type=std_logic lab=vnbias_in}
 C {sunrise/sunrise_int_ext_bias.sym} -740 -80 0 0 {name=xint_ext_bias
 
 xSCH:
 schematic=sunrise_int_ext_bias.sch
+
+xRCX:
+xschematic=sunrise_int_ext_bias_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_int_ext_bias/PEX/sunrise_int_ext_bias_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_int_ext_bias/PEX/sunrise_int_ext_bias_flat_rcx.spice)"
+
+xCX:
+xschematic=sunrise_int_ext_bias_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_int_ext_bias/PEX/sunrise_int_ext_bias_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_int_ext_bias/PEX/sunrise_int_ext_bias_flat_cx.spice)"
 }
 C {ipin.sym} -900 -220 0 0 {name=p2 lab=vnbias_in_5u
 }

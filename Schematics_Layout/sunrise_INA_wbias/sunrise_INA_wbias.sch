@@ -5,8 +5,8 @@ V {}
 S {}
 F {}
 E {}
-N -140 -120 -80 -120 {lab=rdac_ctrl_onehot_hv[2:0]}
-N -140 -100 -80 -100 {lab=rdac_ctrlb_onehot_hv[2:0]}
+N -140 -120 -80 -120 {lab=rdac_ctrl_hv[2:0]}
+N -140 -100 -80 -100 {lab=rdac_ctrlb_hv[2:0]}
 N -140 -80 -80 -80 {lab=pd_hv}
 N -140 -60 -80 -60 {lab=pdb_hv}
 N -140 -200 -80 -200 {lab=vinp}
@@ -36,9 +36,8 @@ N -540 -560 100 -560 {lab=vdda_hv}
 N 100 -560 100 -320 {lab=vdda_hv}
 N 100 -20 100 -0 {lab=vssa}
 N -800 0 100 -0 {lab=vssa}
-C {sunrise/sunrise_INA.sym} 60 40 0 0 {name=xina}
-C {ipin.sym} -140 -120 0 0 {name=p10 lab=rdac_ctrl_onehot_hv[2:0]}
-C {ipin.sym} -140 -100 0 0 {name=p11 lab=rdac_ctrlb_onehot_hv[2:0]}
+C {ipin.sym} -140 -120 0 0 {name=p10 lab=rdac_ctrl_hv[2:0]}
+C {ipin.sym} -140 -100 0 0 {name=p11 lab=rdac_ctrlb_hv[2:0]}
 C {ipin.sym} -140 -80 0 0 {name=p18 lab=pd_hv}
 C {ipin.sym} -140 -60 0 0 {name=p19 lab=pdb_hv}
 C {ipin.sym} -140 -200 0 0 {name=p8 lab=vinp}
@@ -46,7 +45,22 @@ C {ipin.sym} -140 -160 0 0 {name=p9 lab=vinn}
 C {ipin.sym} -800 -560 0 0 {name=p24 lab=vdda_hv}
 C {ipin.sym} 320 -220 2 0 {name=p7 lab=vref}
 C {opin.sym} 320 -180 0 0 {name=p23 lab=vout}
-C {sunrise/sunrise_bias.sym} -560 -420 0 0 {name=xbias}
+C {sunrise/sunrise_bias.sym} -560 -420 0 0 {name=xbias
+
+xSCH:
+schematic=sunrise_bias.sch
+
+xRCX:
+xschematic=sunrise_bias_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_bias/PEX/sunrise_bias_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_bias/PEX/sunrise_bias_flat_rcx.spice)"
+
+xCX:
+xschematic=sunrise_bias_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_bias/PEX/sunrise_bias_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_bias/PEX/sunrise_bias_flat_cx.spice)"
+
+}
 C {ipin.sym} -800 -500 0 0 {name=p1 lab=ext_bias_int_hv}
 C {ipin.sym} -800 -480 0 0 {name=p2 lab=ext_bias_intb_hv}
 C {ipin.sym} -800 -460 0 0 {name=p3 lab=int_bias_int_hv}
@@ -73,3 +87,18 @@ C {devices/lab_wire.sym} -210 -240 0 1 {name=p16 sig_type=std_logic lab=ibias_in
 }
 C {sunrise/title_slice.sym} -810 120 0 0 {name=l1 author="Diarmuid Collins"
 company="SLICE Semiconductor"}
+C {sunrise/sunrise_ina.sym} 60 40 0 0 {name=xina
+
+xSCH:
+schematic=sunrise_ina.sch
+
+xRCX:
+xschematic=sunrise_ina_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina/PEX/sunrise_ina_flat_rcx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina/PEX/sunrise_ina_flat_rcx.spice)"
+
+xCX:
+xschematic=sunrise_ina_flat
+xspice_sym_def="tcleval(.include /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina/PEX/sunrise_ina_flat_cx.spice)"
+xtclcommand="tcleval(textwindow /home/slice/xschem/tb_sunrise_ina_v2/LAYOUT/sunrise_ina/PEX/sunrise_ina_flat_cx.spice)"
+}

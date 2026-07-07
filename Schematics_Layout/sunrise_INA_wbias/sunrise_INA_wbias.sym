@@ -48,8 +48,8 @@ B 5 637.5 -82.5 642.5 -77.5 {name=vref dir=in}
 B 5 137.5 -42.5 142.5 -37.5 {name=vinp dir=in}
 B 5 637.5 -22.5 642.5 -17.5 {name=vout dir=out}
 B 5 137.5 -2.5 142.5 2.5 {name=vinn dir=in}
-B 5 137.5 37.5 142.5 42.5 {name=rdac_ctrl_onehot_hv[2:0] dir=in}
-B 5 137.5 57.5 142.5 62.5 {name=rdac_ctrlb_onehot_hv[2:0] dir=in}
+B 5 137.5 37.5 142.5 42.5 {name=rdac_ctrl_hv[2:0] dir=in}
+B 5 137.5 57.5 142.5 62.5 {name=rdac_ctrlb_hv[2:0] dir=in}
 B 5 137.5 77.5 142.5 82.5 {name=pd_hv dir=in}
 B 5 137.5 97.5 142.5 102.5 {name=pdb_hv dir=in}
 B 5 457.5 137.5 462.5 142.5 {name=vssa dir=in}
@@ -67,8 +67,8 @@ T {vref} 615 -84 0 1 0.2 0.2 {}
 T {vinp} 165 -44 0 0 0.2 0.2 {}
 T {vout} 615 -24 0 1 0.2 0.2 {}
 T {vinn} 165 -4 0 0 0.2 0.2 {}
-T {rdac_ctrl_onehot_hv[2:0]} 165 36 0 0 0.2 0.2 {}
-T {rdac_ctrlb_onehot_hv[2:0]} 165 56 0 0 0.2 0.2 {}
+T {rdac_ctrl_hv[2:0]} 165 36 0 0 0.2 0.2 {}
+T {rdac_ctrlb_hv[2:0]} 165 56 0 0 0.2 0.2 {}
 T {pd_hv} 165 76 0 0 0.2 0.2 {}
 T {pdb_hv} 165 96 0 0 0.2 0.2 {}
 T {vssa} 445 106 0 0 0.2 0.2 {}

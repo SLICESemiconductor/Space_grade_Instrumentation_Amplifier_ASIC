@@ -5,6 +5,11 @@ V {}
 S {}
 F {}
 E {}
+T {Note: Technically speaking, logic should be 
+referred to vssd. However, since vssd and
+vssa short through the substrate (no DNW),
+vssa can be used instead, which simplifes
+the power grid layout.} -440 240 0 0 0.2 0.2 {}
 N -40 120 80 120 {lab=rdac_ctrlb[2:0]}
 N -40 100 80 100 {lab=rdac_ctrl[2:0]}
 N -40 160 80 160 {lab=ip_ctrlb[3:0]}
